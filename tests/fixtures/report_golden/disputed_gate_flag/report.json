@@ -1,0 +1,130 @@
+{
+  "commit": "cccccccccccccccccccccccccccccccccccccccc",
+  "findings": {
+    "claim_checks_not_run_because": null,
+    "claims": [
+      {
+        "checks": {
+          "baseline": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "caption": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "comparability": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "interval": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_data": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_integrity": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_outputs": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "seeds": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "disagrees",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "method": "trained_brier_post",
+            "path": "<working-directory>/runs/main/results.json",
+            "proposed_sha256": null,
+            "sha256": null
+          },
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.2
+        },
+        "provenance": {
+          "path": "<working-directory>/runs/main/results.json",
+          "type": "Intact"
+        },
+        "recompute": {
+          "n": 4,
+          "paper_value": 0.2,
+          "tolerance": 0.1,
+          "type": "Disagrees",
+          "value": 0.07500000000000001
+        }
+      }
+    ],
+    "inputs": {
+      "claim_register_base": "<working-directory>",
+      "claim_register_path": "<working-directory>/.verifier/claim_register.json",
+      "claim_register_sha256": "fde81157c8dffa0de22bca3129dc429c1b540939c19ecfd4d26a95667460ab90",
+      "paper_paths": [],
+      "paper_sha256": null,
+      "switched_off": [],
+      "tool_commit": "<verifier-commit>"
+    },
+    "must_run": [
+      "model_review",
+      "setup_review"
+    ],
+    "papers": {},
+    "superseded": [],
+    "unreadable_claims": []
+  },
+  "issues": [
+    {
+      "axis": "integrity",
+      "code": "number-disagrees",
+      "detail": "provenance: artifact present and matches its pinned checksum; recompute: the claim says 0.2, the data gives 0.075 (tolerance 0.1)",
+      "disputable": true,
+      "disputed": {
+        "dispute_id": "D-1",
+        "reason": "The method reads runs/old/; the notes use runs/fixed/."
+      },
+      "facts": [
+        [
+          "Paper",
+          "0.2"
+        ],
+        [
+          "Data",
+          "0.075"
+        ],
+        [
+          "Difference",
+          "-0.125"
+        ],
+        [
+          "Tolerance",
+          "0.1"
+        ]
+      ],
+      "id": "F-f3e838",
+      "impact": "high",
+      "measured": null,
+      "subject": "disagrees"
+    }
+  ],
+  "methods_ran_in": "the standard library only (no uv.lock)",
+  "report_id": "4a3ed5221f01",
+  "run_error": null,
+  "verdict": "REJECT",
+  "verdict_without_disputed": "PASS WITH CAVEATS"
+}

@@ -1,0 +1,337 @@
+{
+ "examples": [
+  {
+   "key": "D1",
+   "paper": "2ySt3cdGfJ",
+   "claim": "For the conditional generation on the ImageNet 64x64 dataset, DisBack is 2.57 times faster than the variant without the constraint of the convergence trajectory.",
+   "piece": null,
+   "item": "In Table 3 (the ablation study on constraining the convergence trajectory to the score distillation process, FID scores), the variant w/o Convergence Trajectory achieves an FID of 10.29 on AHFQv2.",
+   "label": "do not link",
+   "reason": "Same ablated variant, but another dataset (AFHQv2) and another metric (FID). The claim is about speed on ImageNet 64x64."
+  },
+  {
+   "key": "D2",
+   "paper": "2ySt3cdGfJ",
+   "claim": "The performance of DisBack is inherently limited by the teacher model.",
+   "piece": null,
+   "item": "In Table 1 (the unconditional generation performance comparison, FID scores), the one-step DisBack model (NFE 1, distilled from the pre-trained EDM model) achieves an FID of 9.97 on AFHQv2 (64x64), the best result among the one-step distillation methods (shown in bold).",
+   "label": "do not link",
+   "reason": "The item compares DisBack only with other one-step methods. It has no teacher result, so it says nothing about a limit set by the teacher."
+  },
+  {
+   "key": "D3",
+   "paper": "2ySt3cdGfJ",
+   "claim": "The authors observed that the score distillation underperforms when LCM-LoRA serves as the teacher model.",
+   "piece": null,
+   "item": "In Table 5 (the distillation results of LCM-LoRA with NFE=1, FID evaluated on COCO 2014 at 512x512 resolution with 50,000 real images and 30,000 generated images; LCM-LoRA is the student generator and Stable Diffusion v1.5 is the teacher model), the LCM-LoRA distilled using DisBack has an FID score of 36.37 (shown in bold), while the FID of the original LCM-LoRA is 78.26.",
+   "label": "do not link",
+   "reason": "In the item, LCM-LoRA is the student, not the teacher. A result for the opposite role does not bear on the claim."
+  },
+  {
+   "key": "D4",
+   "paper": "2ySt3cdGfJ",
+   "claim": "In the comparison of the distillation process between the existing SOTA score distillation method Diff-Instruct and the proposed DisBack on (a) CIFAR10, (b) FFHQ64, and (c) ImageNet64 datasets (Figure 1), DisBack achieves a faster convergence speed due to the introduction of the entire convergence trajectory between the student generator and the teacher model.",
+   "piece": null,
+   "item": "Theorem 1 proves that introducing the additional KL-divergence for t>0 does not affect the global optimum of the original optimization problem in Eq.(1).",
+   "label": "do not link",
+   "reason": "The theorem is about the optimum of the objective, not about convergence speed."
+  },
+  {
+   "key": "D5",
+   "paper": "2ySt3cdGfJ",
+   "claim": "Therefore, the proposed method incurs trivial additional computational costs.",
+   "piece": null,
+   "item": "Compared to existing methods, the final target of DisBack is the same while constraining the convergence trajectory to achieve more efficient distillation of the student generator.",
+   "label": "do not link",
+   "reason": "The item states a design goal and gives no cost. It is not evidence for a cost claim."
+  },
+  {
+   "key": "D6",
+   "paper": "2ySt3cdGfJ",
+   "claim": "The ablation results confirm the efficacy of constraining the convergence trajectory between the teacher model and the student generator: it can improve the final performance of the generation.",
+   "piece": null,
+   "item": "Table 1 reports the unconditional generation performance of DisBack (FID scores): the one-step DisBack model (NFE 1) achieves 10.88 on FFHQ, 9.97 on AFHQv2, 6.99 on LSUN-bedroom and 10.30 on LSUN-cat, shown in bold as the best results among the one-step distillation methods in the table.",
+   "label": "do not link",
+   "reason": "Table 1 compares DisBack with other methods. It has no variant without the constraint, so it is not the ablation."
+  },
+  {
+   "key": "D7",
+   "paper": "2ySt3cdGfJ",
+   "claim": "DisBack can achieve performance comparable to or even better than the existing diffusion models or distillation methods; in conclusion, DisBack can achieve competitive distillation performance compared to existing models.",
+   "piece": null,
+   "item": "Contribution (1): the paper extends the score distillation process by introducing the entire convergence trajectory of the teacher models and proposes Distribution Backtracking Distillation (DisBack), which achieves a faster and more efficient distillation.",
+   "label": "do not link",
+   "reason": "A contribution statement is the authors' summary, not a result. The claim needs the benchmark comparisons."
+  },
+  {
+   "key": "D8",
+   "paper": "2ySt3cdGfJ",
+   "claim": "Since distribution degradation is easily achievable, the degradation recording stage of DisBack only needs trivial additional computational resources (200 iterations in most cases).",
+   "piece": null,
+   "item": "In distribution backtracking, the last node s_theta_N' in the degradation path is close to the initially generated distribution q^G_0.",
+   "label": "do not link",
+   "reason": "The item says where the degradation path ends. It says nothing about the cost or the number of iterations."
+  },
+  {
+   "key": "D9",
+   "paper": "2ySt3cdGfJ",
+   "claim": "Notably, DisBack is easy to implement and can be generalized to existing distillation methods to boost performance.",
+   "piece": null,
+   "item": "In Table 4 (the results of text-to-image generation, FID evaluated on COCO 2014; user preference from the user study with 128 prompts from LAION-Aesthetics and 10 volunteers), the original SDXL with NFE 100 (100-step DDIM sampler) achieves an FID of 19.36.",
+   "label": "do not link",
+   "reason": "The item is the teacher's FID, a reference value. The claim needs results where DisBack improves another distillation method."
+  },
+  {
+   "key": "S1",
+   "paper": "1R5BcYS8EC",
+   "claim": "Table 1 (buildings surrogate accuracy on held-out test buildings; mean NRMSE across 3 random seeds; lower NRMSE is better) shows that when using a BERT encoder instead of DistilBERT, SysCaps surrogates achieve better accuracy than one-hot baselines, and that the ablated SSM trained without any attribute information (attribute encoding ``X'') has poor accuracy, which shows that the multimodal architecture successfully learns to fuse the text-based attribute and timeseries inputs.",
+   "piece": null,
+   "item": "The sequential architecture matters: Table 1 shows that the LSTM and SSM encoders outperform both the ResNet and our carefully tuned LightGBM baseline, and the SSM outperforms the LSTM.",
+   "label": "do not link",
+   "reason": "Same table, but another comparison (encoder architecture). A finding from the same table is not support unless it states the compared rows."
+  },
+  {
+   "key": "S2",
+   "paper": "1R5BcYS8EC",
+   "claim": "Examples and results are shown in Table 4, where for 11/14 building type synonyms the increase in NRMSE is less than 13%, while the average increase for the two baselines (captions with the building type attribute removed, and captions with a random building type) is 54% and 90%, respectively.",
+   "piece": "Definition of the building-hour NRMSE",
+   "item": "In Table 1 (buildings surrogate accuracy on held-out test buildings; mean NRMSE across 3 random seeds; lower NRMSE is better), the SSM model with a DistilBERT text encoder and SysCaps-kv attribute encoding achieves a mean buildings-hourly NRMSE (the NRMSE normalized per building and per hour) of 0.454 \u00b1 0.012 and a mean stock-annual NRMSE (the predictions and targets are first summed over all buildings and hours before computing the NRMSE; equivalent to the normalized mean bias error) of 0.046 \u00b1 0.003.",
+   "label": "do not link",
+   "reason": "The item is a Table 1 result that repeats the metric definition in brackets. Do not link a result row for a definition."
+  },
+  {
+   "key": "S3",
+   "paper": "1R5BcYS8EC",
+   "claim": "Examples and results are shown in Table 4, where for 11/14 building type synonyms the increase in NRMSE is less than 13%, while the average increase for the two baselines (captions with the building type attribute removed, and captions with a random building type) is 54% and 90%, respectively.",
+   "piece": null,
+   "item": "In Table 3 (SysCaps zero-shot length generalization; NRMSE is per-building-hourly), the SSM model trained with medium-length SysCaps and evaluated zero-shot on short and long captions achieves an NRMSE of 0.57 \u00b1 0.02 on short captions.",
+   "label": "do not link",
+   "reason": "Table 3 is the caption-length experiment. The claim is about the synonym experiment in Table 4."
+  },
+  {
+   "key": "S4",
+   "paper": "1R5BcYS8EC",
+   "claim": "Prediction accuracy improves as more information is given; notably, there is a large jump in accuracy once the building square footage is known.",
+   "piece": null,
+   "item": "In Table 1 (buildings surrogate accuracy on held-out test buildings; mean NRMSE across 3 random seeds; lower NRMSE is better), the SSM model with no text encoder and onehot attribute encoding achieves a mean buildings-hourly NRMSE (the NRMSE normalized per building and per hour) of 0.450 \u00b1 0.019 and a mean stock-annual NRMSE (the predictions and targets are first summed over all buildings and hours before computing the NRMSE; equivalent to the normalized mean bias error) of 0.041 \u00b1 0.021.",
+   "label": "do not link",
+   "reason": "The item is one model's result with all information. The claim needs results with different amounts of building information."
+  },
+  {
+   "key": "S5",
+   "paper": "1R5BcYS8EC",
+   "claim": "Additional experiments also highlight the potential of SysCaps to unlock language-driven design space exploration and to regularize training through prompt augmentation.",
+   "piece": null,
+   "item": "In Table 5 (wind farm surrogate accuracy; the base architecture is ResNet; average across 3 random seeds), the SysCaps-kv model achieves an NRMSE of 0.054 \u00b1 0.024.",
+   "label": "do not link",
+   "reason": "The item is a plain accuracy number. Design exploration and prompt augmentation are tested in other experiments."
+  },
+  {
+   "key": "S6",
+   "paper": "1R5BcYS8EC",
+   "claim": "Our experiments on two real-world simulators of buildings and wind farms show that our SysCaps-augmented surrogates have better accuracy on held-out systems than traditional methods while enjoying new generalization abilities, such as handling semantically related descriptions of the same test system.",
+   "piece": null,
+   "item": "In Table 1 (buildings surrogate accuracy on held-out test buildings; mean NRMSE across 3 random seeds; lower NRMSE is better), the SSM model with no text encoder and attribute encoding \"X\" (no attribute information, an ablation) achieves a mean buildings-hourly NRMSE (the NRMSE normalized per building and per hour) of 1.712 \u00b1 0.003 and a mean stock-annual NRMSE (the predictions and targets are first summed over all buildings and hours before computing the NRMSE; equivalent to the normalized mean bias error) of 0.658 \u00b1 0.008.",
+   "label": "do not link",
+   "reason": "The no-attribute row is an ablation, not a traditional method. The comparison needs the one-hot and LightGBM rows."
+  },
+  {
+   "key": "S7",
+   "paper": "1R5BcYS8EC",
+   "claim": "Figure 8 shows a natural language building SysCap in which the LLM confuses the weekday closing time with the weekend open time.",
+   "piece": null,
+   "item": "Table 2 (caption quality) shows that a multi-class classifier trained to predict each categorical attribute in a SysCap achieves an average test accuracy of 88.90% for short (2-3 sent.), 90.90% for medium (4-6 sent.) and 90.38% for long (7-9 sent.) captions of 13 attributes, which suggests that ~9-12% of attributes are missing or incorrect per SysCap, due to errors made by llama-2-7b-chat.",
+   "label": "do not link",
+   "reason": "The claim describes one example in Figure 8. An average error rate does not state that example."
+  },
+  {
+   "key": "S8",
+   "paper": "1R5BcYS8EC",
+   "claim": "The SSM and LSTM with natural language SysCaps has slightly worse accuracy than with the key-value SysCaps, yet they comfortably outperform the non-sequential models (including LightGBM) and the one-hot baselines at the stock-annual aggregation level.",
+   "piece": null,
+   "item": "In Table 3 (SysCaps zero-shot length generalization; NRMSE is per-building-hourly), the SSM model trained with medium-length SysCaps and evaluated zero-shot on short and long captions achieves an NRMSE of 0.57 \u00b1 0.02 on short captions.",
+   "label": "do not link",
+   "reason": "Another experiment (caption length) and another aggregation level (building-hourly). The claim is about the stock-annual level."
+  },
+  {
+   "key": "S9",
+   "paper": "1R5BcYS8EC",
+   "claim": "However, the BERT encoder is sufficiently expressive to mitigate this (the expected non-negligible drop in regression accuracy for SysCaps models, because the text encoder has to compress the caption into a single embedding vector).",
+   "piece": null,
+   "item": "In Table 1 (buildings surrogate accuracy on held-out test buildings; mean NRMSE across 3 random seeds; lower NRMSE is better), the SSM model with no text encoder and attribute encoding \"X\" (no attribute information, an ablation) achieves a mean buildings-hourly NRMSE (the NRMSE normalized per building and per hour) of 1.712 \u00b1 0.003 and a mean stock-annual NRMSE (the predictions and targets are first summed over all buildings and hours before computing the NRMSE; equivalent to the normalized mean bias error) of 0.658 \u00b1 0.008.",
+   "label": "do not link",
+   "reason": "To test the drop, compare the SysCaps rows with the one-hot rows. The no-attribute row is only a lower bound."
+  },
+  {
+   "key": "G1",
+   "paper": "AjXkRZIvjB",
+   "claim": "Models commonly interpret statements about ``discount'' as ``multiplication'', regardless of the context.",
+   "piece": null,
+   "item": "In the full 8-shot results of Table 1 (8-shot Chain-of-Thought evaluation), the model o1-preview reaches 94.9 on GSM8K (Full) (accuracy on the full GSM8K test set, comprising 1,319 examples) and 96.0 on GSM8K (100) (accuracy on the randomly selected subset of 100 GSM8K test questions used to generate the GSM-Symbolic templates), and mean accuracies of 93.6 (\u00b1 1.68) on Symbolic-M1, 92.7 (\u00b1 1.82) on Symbolic, 95.4 (\u00b1 1.72) on Symbolic-P1, 94.0 (\u00b1 2.38) on Symbolic-P2 and 77.4 (\u00b1 3.84) on Symbolic-NoOp, where each GSM-Symbolic variant column gives the mean over 50 datasets of 100 examples each, generated from symbolic templates, with \u00b1 the standard deviation; Symbolic-M1 removes one clause from the GSM-Symbolic template, Symbolic-P1 and Symbolic-P2 add one or two clauses, and Symbolic-NoOp adds a seemingly relevant but inconsequential statement.",
+   "label": "do not link",
+   "reason": "The claim is a qualitative error pattern. Accuracy numbers do not show how models read 'discount', so link no model row."
+  },
+  {
+   "key": "G2",
+   "paper": "AjXkRZIvjB",
+   "claim": "Some models can perform significantly better with NoOp-Symb shots, even though they do not perform nearly as well on GSM8K and GSM-Symbolic.",
+   "piece": null,
+   "item": "LLMs struggle even when provided with multiple examples of the same question or examples containing similar irrelevant information.",
+   "label": "do not link",
+   "reason": "This is a parallel finding from the same experiment. It does not state the results for the models that improve."
+  },
+  {
+   "key": "G3",
+   "paper": "AjXkRZIvjB",
+   "claim": "LLMs struggle even when provided with multiple examples of the same question or examples containing similar irrelevant information.",
+   "piece": null,
+   "item": "In the full 8-shot results of Table 1 (8-shot Chain-of-Thought evaluation), the model Llama3-8b reaches 55.8 on GSM8K (Full) (accuracy on the full GSM8K test set, comprising 1,319 examples) and 61.0 on GSM8K (100) (accuracy on the randomly selected subset of 100 GSM8K test questions used to generate the GSM-Symbolic templates), and mean accuracies of 79.5 (\u00b1 3.62) on Symbolic-M1, 74.6 (\u00b1 2.94) on Symbolic, 53.8 (\u00b1 4.54) on Symbolic-P1, 12.3 (\u00b1 3.43) on Symbolic-P2 and 18.6 (\u00b1 3.86) on Symbolic-NoOp, where each GSM-Symbolic variant column gives the mean over 50 datasets of 100 examples each, generated from symbolic templates, with \u00b1 the standard deviation; Symbolic-M1 removes one clause from the GSM-Symbolic template, Symbolic-P1 and Symbolic-P2 add one or two clauses, and Symbolic-NoOp adds a seemingly relevant but inconsequential statement.",
+   "label": "do not link",
+   "reason": "Table 1 uses the standard 8 shots. The claim is about the experiments with NoOp shots."
+  },
+  {
+   "key": "A1",
+   "paper": "9WbNpRuFuS",
+   "claim": "Table 2 gives the lipogram evaluation results, including subjective rater evaluations of output quality and adherence to the constraint (higher is better for Quality and Constraint Intent; lower is better for Generation Ratio), with constraint intent automatically set to 1 if the banned letter is detected in the output, and with generation stopped after 2000 model invocations and the output provided as-is: Constrained generation obtains Quality (1-5) 3.56 \u00b1 1.69, Constraint Intent (1-3) 2.32 \u00b1 0.90, and Gen. Ratio 1.00 \u00b1 0.00; AprAD (Ours) obtains 4.52 \u00b1 1.16, 2.84 \u00b1 0.55, and 4.20 \u00b1 4.53; ASAp obtains 1.72 \u00b1 1.17, 2.36 \u00b1 0.81, and 321.00 \u00b1 397.14; and Unconstrained generation obtains 4.68 \u00b1 0.85, 1.00 \u00b1 0.00, and 1.00 \u00b1 0.00; for ASAp, the 2000-invocation stop often resulted in very short outputs and thus extreme generation ratios and low scores, and several raters interpreted these short outputs as violating constraint intent.",
+   "piece": null,
+   "item": "On BigCodeBench with Starcoder2 15b (5 samples are generated for each task, with temperature 0.8 and a top-p of 0.95; !NameErr is the rate at which the evaluation does not fail with a NameError or UnboundLocalError, an indicator that the generation included a hallucinated API call; the generation ratio is how many times the language model must be evaluated, divided by the number of tokens generated), on the subset of tasks where at least one trial results in a different output across the four sampling methods (233 tasks (20.4%) for 15b, 304 tasks (26.7%) for 7b), Unconstrained generation achieves Pass@1 0.214, Pass@5 0.498, !NameErr@1 0.831, !NameErr@5 0.996, and Gen. Ratio 1.000 \u00b1 0.000 (lower is better for generation ratio; higher is better for all others).",
+   "label": "do not link",
+   "reason": "BigCodeBench is a different experiment. A shared metric name (generation ratio) does not make it support for a lipogram claim."
+  },
+  {
+   "key": "A2",
+   "paper": "9WbNpRuFuS",
+   "claim": "On BigCodeBench with Starcoder2 (5 samples generated for each task, with temperature 0.8 and a top-p of 0.95), the subset of tasks where at least one trial results in a different output across the four sampling methods comprises 233 tasks (20.4%) for 15b and 304 tasks (26.7%) for 7b; for both model sizes, of the tasks where at least one model output is different, an average of 1.5 out of 5 outputs are different; the paper's method (AprAD) approaches the task performance of ASAp, with a generation ratio close to that of constrained generation; the table gives, for the 15b model: Unconstrained has Pass@1 0.214, Pass@5 0.498, !NameErr@1 0.831, !NameErr@5 0.996, and Gen. Ratio 1.000 \u00b1 0.000; Ours has 0.259, 0.541, 0.976, 1.000, and 1.080 \u00b1 0.385; ASAp has 0.261, 0.536, 0.976, 1.000, and 1.555 \u00b1 3.906; Constrained has 0.221, 0.506, 0.930, 1.000, and 1.005 \u00b1 0.053; and for the 7b model: Unconstrained has 0.119, 0.345, 0.800, 0.987, and 1.000 \u00b1 0.000; Ours has 0.145, 0.375, 0.950, 0.993, and 1.064 \u00b1 0.402; ASAp has 0.152, 0.395, 0.952, 0.993, and 1.468 \u00b1 2.574; Constrained has 0.124, 0.345, 0.891, 0.993, and 1.005 \u00b1 0.029 (lower is better for generation ratio; higher is better for all others).",
+   "piece": null,
+   "item": "In the simulated testbench of the paper (a simulated language model always returns one of three tokens A, B, and C with equal probability, k sequences of length 3 are marked as errors, and the sampling method under test is used to sample 10000 sequences of length 3; the KL-divergence is computed between the observed distribution and the ideal distribution, and the Generation Ratio is how many times the language model must be evaluated, divided by the number of tokens generated in the output), with error set AAA, ACC: ASAp has KL-div 0.0013 and Ratio 1.042, Constrained has KL-div 0.0138 and Ratio 1.000, and AprAD (Ours) has KL-div 0.0093 and Ratio 1.009 (lower is better for both).",
+   "label": "do not link",
+   "reason": "The simulated testbench is a different experiment. The item repeats the generation ratio definition, but that is not a reason to link it."
+  },
+  {
+   "key": "A3",
+   "paper": "9WbNpRuFuS",
+   "claim": "On BigCodeBench, the output quality of AprAD is close to ASAp, while its generation ratio is much lower.",
+   "piece": null,
+   "item": "On BigCodeBench with Starcoder2 15b (5 samples are generated for each task, with temperature 0.8 and a top-p of 0.95; !NameErr is the rate at which the evaluation does not fail with a NameError or UnboundLocalError, an indicator that the generation included a hallucinated API call; the generation ratio is how many times the language model must be evaluated, divided by the number of tokens generated), on the subset of tasks where at least one trial results in a different output across the four sampling methods (233 tasks (20.4%) for 15b, 304 tasks (26.7%) for 7b), Constrained generation achieves Pass@1 0.221, Pass@5 0.506, !NameErr@1 0.930, !NameErr@5 1.000, and Gen. Ratio 1.005 \u00b1 0.053 (lower is better for generation ratio; higher is better for all others).",
+   "label": "do not link",
+   "reason": "The claim compares AprAD with ASAp. The Constrained generation row is not part of that comparison."
+  },
+  {
+   "key": "A4",
+   "paper": "9WbNpRuFuS",
+   "claim": "Because the distributions of P\u0302^B and P\u0302^(B \u222a {x}) are so close to each other, the prefix of x that AprAD obtains by evaluating SpecSample(x, P\u0302^B, P\u0302^(B \u222a {x})) is usually most of the length of x.",
+   "piece": null,
+   "item": "In the limit of repeated samples, ASAp's set B of encountered rejected samples will approach the error set \u212c, and therefore P\u0302^B will approach P\u0302^\u212c (the distribution obtained by sampling P except for any elements of \u212c).",
+   "label": "do not link",
+   "reason": "The item is about the limit of ASAp's set B. The claim rests on two sets that differ by one sample, which the item does not state."
+  },
+  {
+   "key": "A5",
+   "paper": "9WbNpRuFuS",
+   "claim": "On BigCodeBench with Starcoder2 (5 samples generated for each task, with temperature 0.8 and a top-p of 0.95), the subset of tasks where at least one trial results in a different output across the four sampling methods comprises 233 tasks (20.4%) for 15b and 304 tasks (26.7%) for 7b; for both model sizes, of the tasks where at least one model output is different, an average of 1.5 out of 5 outputs are different; the paper's method (AprAD) approaches the task performance of ASAp, with a generation ratio close to that of constrained generation; the table gives, for the 15b model: Unconstrained has Pass@1 0.214, Pass@5 0.498, !NameErr@1 0.831, !NameErr@5 0.996, and Gen. Ratio 1.000 \u00b1 0.000; Ours has 0.259, 0.541, 0.976, 1.000, and 1.080 \u00b1 0.385; ASAp has 0.261, 0.536, 0.976, 1.000, and 1.555 \u00b1 3.906; Constrained has 0.221, 0.506, 0.930, 1.000, and 1.005 \u00b1 0.053; and for the 7b model: Unconstrained has 0.119, 0.345, 0.800, 0.987, and 1.000 \u00b1 0.000; Ours has 0.145, 0.375, 0.950, 0.993, and 1.064 \u00b1 0.402; ASAp has 0.152, 0.395, 0.952, 0.993, and 1.468 \u00b1 2.574; Constrained has 0.124, 0.345, 0.891, 0.993, and 1.005 \u00b1 0.029 (lower is better for generation ratio; higher is better for all others).",
+   "piece": null,
+   "item": "Some hallucinated method names lead to an AttributeError being raised.",
+   "label": "do not link",
+   "reason": "This is a side remark. None of the numbers in the claim depend on it."
+  },
+  {
+   "key": "A6",
+   "paper": "9WbNpRuFuS",
+   "claim": "The paper presents a method (Approximately Aligned Decoding, AprAD) to balance the distortion of the output distribution with computational efficiency, allowing for the generation of long sequences of text with difficult-to-satisfy constraints, with less amplification of low probability outputs compared to existing methods.",
+   "piece": null,
+   "item": "In the simulated testbench of the paper (a simulated language model always returns one of three tokens A, B, and C with equal probability, k sequences of length 3 are marked as errors, and the sampling method under test is used to sample 10000 sequences of length 3; the KL-divergence is computed between the observed distribution and the ideal distribution, and the Generation Ratio is how many times the language model must be evaluated, divided by the number of tokens generated in the output), with error set \u2205: ASAp has KL-div 0.0014 and Ratio 1.000, Constrained has KL-div 0.0014 and Ratio 1.000, and AprAD (Ours) has KL-div 0.0014 and Ratio 1.000 (lower is better for both).",
+   "label": "do not link",
+   "reason": "With an empty error set, all methods are the same. This row cannot show a difference between the methods."
+  },
+  {
+   "key": "A7",
+   "paper": "9WbNpRuFuS",
+   "claim": "The results of the simulated testbench (Table 1) indicate that the paper's method (AprAD) approximates the ideal distribution more closely than constrained generation, with a lower generation ratio than ASAp.",
+   "piece": "Definition of constrained generation (greedy token avoidance)",
+   "item": "Constrained generation, ASAp, and AprAD may all be generalized by their backtracking behavior after an error is discovered: they are specializations of the same general algorithm, differing only in their backtracking behavior upon the discovery of an error \u2014 ASAp always backtracks to the beginning of the sequence, constrained generation only backtracks to immediately before the error, and AprAD probabilistically backtracks, with the most likely targets being recent high-entropy tokens.",
+   "label": "link",
+   "reason": "The item states how constrained generation backtracks, which is the definition that the claim needs."
+  },
+  {
+   "key": "A8",
+   "paper": "9WbNpRuFuS",
+   "claim": "In the lipogram evaluation, while the computation required by AprAD is more than constrained generation, the method is usually able to finish generation in the allotted computation limit (2000 model invocations), while ASAp struggles to generate more than a handful of tokens with the same constraint.",
+   "piece": null,
+   "item": "On BigCodeBench with Starcoder2 7b (5 samples are generated for each task, with temperature 0.8 and a top-p of 0.95; !NameErr is the rate at which the evaluation does not fail with a NameError or UnboundLocalError, an indicator that the generation included a hallucinated API call; the generation ratio is how many times the language model must be evaluated, divided by the number of tokens generated), on the subset of tasks where at least one trial results in a different output across the four sampling methods (233 tasks (20.4%) for 15b, 304 tasks (26.7%) for 7b), AprAD (the paper's method, Approximately Aligned Decoding) achieves Pass@1 0.145, Pass@5 0.375, !NameErr@1 0.950, !NameErr@5 0.993, and Gen. Ratio 1.064 \u00b1 0.402 (lower is better for generation ratio; higher is better for all others).",
+   "label": "do not link",
+   "reason": "The item is a BigCodeBench result. The claim is about the lipogram evaluation."
+  },
+  {
+   "key": "P1",
+   "paper": "2ySt3cdGfJ",
+   "claim": "Conclusion: DisBack performs a faster and more efficient distillation and achieves a comparable or better performance in one-step generation compared to existing multi-step generation diffusion models and one-step diffusion distillation models, and can also be used in the distillation of large-scale text-to-image models.",
+   "piece": null,
+   "item": "For unconditional generation, the one-step generator distilled by DisBack achieves comparable performance across different datasets (FFHQ 64x64, AFHQv2 64x64, LSUN-bedroom 256x256, LSUN cat 256x256) compared to multi-step generation diffusion models.",
+   "label": "link",
+   "reason": "The item states the comparable one-step result that the conclusion summarizes."
+  },
+  {
+   "key": "P2",
+   "paper": "2ySt3cdGfJ",
+   "claim": "In the toy experiment on two-dimensional Gaussian mixture data, the results show that the proposed method for training the student generator in the paper is effective.",
+   "piece": null,
+   "item": "In the toy experiment on two-dimensional Gaussian mixture data, as training progresses, the generated distribution q^G initially expands outward and then gradually convergents towards the training distribution.",
+   "label": "link",
+   "reason": "Same toy experiment. The item states the observed result that shows the training is effective."
+  },
+  {
+   "key": "P3",
+   "paper": "1R5BcYS8EC",
+   "claim": "Examples and results are shown in Table 4, where for 11/14 building type synonyms the increase in NRMSE is less than 13%, while the average increase for the two baselines (captions with the building type attribute removed, and captions with a random building type) is 54% and 90%, respectively.",
+   "piece": null,
+   "item": "In Table 4 (generalization to attribute synonyms; the metric is the difference in NRMSE between the original caption and the modified caption; bold marks the best method, i.e., closest to 0), replacing the building type SecondarySchool with the synonym HighSchool in the caption changes NRMSE by -0.01 \u00b1 0.04 (bold), removing the building type and sub-type attributes from the caption changes NRMSE by 0.52 \u00b1 0.06, and randomly swapping the correct building type attributes with incorrect ones changes NRMSE by 0.67 \u00b1 0.33.",
+   "label": "link",
+   "reason": "The claim summarizes Table 4. Each Table 4 row gives numbers that the 11/14 count and the averages use."
+  },
+  {
+   "key": "P4",
+   "paper": "1R5BcYS8EC",
+   "claim": "Our experiments on two real-world simulators of buildings and wind farms show that our SysCaps-augmented surrogates have better accuracy on held-out systems than traditional methods while enjoying new generalization abilities, such as handling semantically related descriptions of the same test system.",
+   "piece": null,
+   "item": "In Table 1 (buildings surrogate accuracy on held-out test buildings; mean NRMSE across 3 random seeds; lower NRMSE is better), the LightGBM model with no text encoder and onehot attribute encoding achieves a mean buildings-hourly NRMSE (the NRMSE normalized per building and per hour) of 0.679 \u00b1 0.014 and a mean stock-annual NRMSE (the predictions and targets are first summed over all buildings and hours before computing the NRMSE; equivalent to the normalized mean bias error) of 0.094 \u00b1 0.003.",
+   "label": "link",
+   "reason": "LightGBM with one-hot input is a traditional method. The claim compares SysCaps with it on held-out buildings."
+  },
+  {
+   "key": "P5",
+   "paper": "AjXkRZIvjB",
+   "claim": "The performance levels across the full GSM8K test set (1,319 examples) and the subset of 100 questions used to generate GSM-Symbolic templates are very similar, with no significant differences observed.",
+   "piece": null,
+   "item": "In the full 8-shot results of Table 1 (8-shot Chain-of-Thought evaluation), the model Gemma-7b-it reaches 29.3 on GSM8K (Full) (accuracy on the full GSM8K test set, comprising 1,319 examples) and 33.0 on GSM8K (100) (accuracy on the randomly selected subset of 100 GSM8K test questions used to generate the GSM-Symbolic templates), and mean accuracies of 34.1 (\u00b1 4.41) on Symbolic-M1, 25.6 (\u00b1 3.25) on Symbolic, 6.0 (\u00b1 3.38) on Symbolic-P1, 3.1 (\u00b1 1.92) on Symbolic-P2 and 8.7 (\u00b1 2.71) on Symbolic-NoOp, where each GSM-Symbolic variant column gives the mean over 50 datasets of 100 examples each, generated from symbolic templates, with \u00b1 the standard deviation; Symbolic-M1 removes one clause from the GSM-Symbolic template, Symbolic-P1 and Symbolic-P2 add one or two clauses, and Symbolic-NoOp adds a seemingly relevant but inconsequential statement.",
+   "label": "link",
+   "reason": "The item gives one model's accuracy on the full set and on the 100-question subset, which the claim compares."
+  },
+  {
+   "key": "P6",
+   "paper": "AjXkRZIvjB",
+   "claim": "The performance on the original questions from the 100 examples of GSM8K used as templates is often more than one standard deviation away from the center of the GSM-Symbolic performance distribution, frequently on the right side of the distribution; this holds for 21 out of 25 models.",
+   "piece": null,
+   "item": "For models such as Gemma2-9B, Phi-3, Phi-3.5, and Mathstral-7B, the GSM8K performance lies on the right side of the GSM-Symbolic distribution and the drop in performance is higher, while for models such as Llama3-8b and GPT-4o the performance on GSM8K is close to the center of the GSM-Symbolic distribution and the drop in performance is negligible.",
+   "label": "link",
+   "reason": "The item states where the GSM8K score falls in the GSM-Symbolic distribution for named models. The claim counts such models."
+  },
+  {
+   "key": "P7",
+   "paper": "9WbNpRuFuS",
+   "claim": "In the lipogram evaluation, while the computation required by AprAD is more than constrained generation, the method is usually able to finish generation in the allotted computation limit (2000 model invocations), while ASAp struggles to generate more than a handful of tokens with the same constraint.",
+   "piece": null,
+   "item": "In the lipogram evaluation of the paper (Mistral-7B-Instruct-v0.2 is prompted to perform one of five simple tasks, each appended to instructions to avoid using one of the five vowels, resulting in 25 prompts, and a completion is generated with each of the four sampling methods for up to 200 tokens, with generation interrupted if the process reaches 2000 model invocations; human raters score each completion on quality on a scale of 1-5 and rate how well the response follows the intent of the constraint on a scale of 1-3, with constraint intent automatically set to 1 if the banned letter is detected in the output), constrained generation obtains Quality (1-5) 3.56 \u00b1 1.69, Constraint Intent (1-3) 2.32 \u00b1 0.90, and Gen. Ratio 1.00 \u00b1 0.00 (higher is better for Quality and Constraint Intent; lower is better for Generation Ratio).",
+   "label": "link",
+   "reason": "Same lipogram evaluation. The item gives the 2000-invocation limit and the constrained generation ratio that the claim compares with."
+  },
+  {
+   "key": "P8",
+   "paper": "9WbNpRuFuS",
+   "claim": "The results of the simulated testbench (Table 1) indicate that the paper's method (AprAD) approximates the ideal distribution more closely than constrained generation, with a lower generation ratio than ASAp.",
+   "piece": null,
+   "item": "Table 1 gives the KL-Divergence and generation ratios for the simulated task with various error sets (lower is better for both; stars in the error set are wildcards, i.e. AB* means ABA, ABB, and ABC; constrained generation backtracks if all tokens for a given prefix are disallowed, resulting in ratios greater than 1 for some error sets): for error set \u2205, ASAp has KL-div 0.0014 and Ratio 1.000, Constrained has 0.0014 and 1.000, and AprAD (Ours) has 0.0014 and 1.000; for AAA: 0.0014 and 1.020, 0.0075 and 1.000, 0.0046 and 1.004; for AAA, AAC: 0.0012 and 1.041, 0.0429 and 1.000, 0.0157 and 1.013; for AAA, ACC: 0.0013 and 1.042, 0.0138 and 1.000, 0.0093 and 1.009; for AAA, CCC: 0.0010 and 1.044, 0.0155 and 1.000, 0.0074 and 1.010; for AAA, AAB, ABA, BAA: 0.0013 and 1.093, 0.0504 and 1.000, 0.0224 and 1.024; for A** except AAC: 0.0014 and 1.232, 0.3836 and 1.113, 0.1540 and 1.205; for *** except AAA, AAB, ABA, BAA: 0.0000 and 3.644, 0.1771 and 1.670, 0.0521 and 2.142; and for *** except AAA, BAA: 0.0000 and 5.701, 0.0000 and 1.784, 0.0000 and 2.653; across these error sets, AprAD (Ours) approximates the ideal distribution more closely than constrained generation, with a lower generation ratio than ASAp.",
+   "label": "link",
+   "reason": "The claim cites Table 1. The item gives the Table 1 numbers for all error sets."
+  }
+ ]
+}

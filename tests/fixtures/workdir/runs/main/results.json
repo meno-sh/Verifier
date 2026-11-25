@@ -1,0 +1,7 @@
+{"records": [
+  {"condition": "trained", "post": 0.9, "prior": 0.6, "y": 1},
+  {"condition": "trained", "post": 0.2, "prior": 0.5, "y": 0},
+  {"condition": "trained", "post": 0.7, "prior": 0.5, "y": 1},
+  {"condition": "trained", "post": 0.4, "prior": 0.4, "y": 0},
+  {"condition": "base", "post": 0.5, "prior": 0.5, "y": 1}
+]}

@@ -1,0 +1,37 @@
+\documentclass{article}
+\begin{document}
+\begin{abstract}
+Our method improves the score from 0.412 to 0.201, a clear advance.
+\end{abstract}
+
+\section{Results}
+The effect is significant and holds across settings.
+Accuracy reached 148.5\% of the previous state of the art.
+We measure $+0.330\ [+0.410,\, +0.220]$ for the treatment condition.
+The control gives $+0.900\ [+0.100,\, +0.200]$, well outside expectations.
+Performance of GPT-4o is discussed in Table~\ref{tab:missing}.
+
+\begin{table}[t]
+\centering
+\caption{Results for Llama-3.1-8B under both conditions.}
+\label{tab:one}
+\begin{tabular}{lcc}
+\toprule
+condition & score & n \\
+\midrule
+Qwen3-32B & 0.201 & 100 \\
+Qwen3-32B & 0.315 & 100 & 7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{A second table.}
+\label{tab:one}
+\begin{tabular}{ll}
+a & b \\
+\end{tabular}
+\end{table}
+
+See Table~\ref{tab:one} for details.
+\end{document}

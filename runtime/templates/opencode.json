@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": false,
+  "share": "disabled",
+  "model": "{env:VERIFIER_MODEL}",
+  "small_model": "{env:VERIFIER_MODEL}",
+  "permission": {
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "edit": "allow",
+    "webfetch": "deny",
+    "external_directory": "allow",
+    "doom_loop": "deny"
+  }
+}

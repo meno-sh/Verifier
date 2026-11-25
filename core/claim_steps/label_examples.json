@@ -1,0 +1,690 @@
+{
+ "note": "Fixed before any R2 score was seen. Examples 1 to 7 are pieces from runs-new papers outside sample.json; examples 8 and 9 are generic whole tables (a table is one candidate and one claim, with no values); 'previous' and 'caption' are cut to 200 characters to keep the prompt short. Each example has its label and its answer: the keep score, the values the piece reports, as printed, and why. A setup example is kept, for the setup register.",
+ "examples": [
+  {
+   "paper": "GjM61KRiTG",
+   "cid": "paper/preprint.tex#s-95aec37d",
+   "label": "claim",
+   "block": "kind: sentence\nsection: Introduction\nsentence before: We establish a safety evaluation protocol that includes extensive discriminative and generative tasks, and we perform evaluations on open-sourced LLMs.\ntext: Using our algorithm, we efficiently improve the harmlessness of open-sourced models by 15% with a public dataset and by 13% with only 1.5K red teaming data, all while preserving helpfulness.",
+   "answer": {
+    "keep": 95,
+    "why": "a result claim: keep",
+    "values": [
+     "15",
+     "13"
+    ]
+   }
+  },
+  {
+   "paper": "GjM61KRiTG",
+   "cid": "paper/preprint.tex#s-15180514",
+   "label": "setup",
+   "block": "kind: sentence\nsection: BFPO Framework: Bi-Factorial Preference Optimization > Illustrative Examples\nsentence before: The preference dataset is constructed from all pairs of actions, along with their paired helpfulness rankings and safety labels.\ntext: We optimize the policy with the Adam optimizer for 1800 steps, with a learning rate of 0.01, batch size of 32 sampled with replacement, \\( τ=1\\), and \\( α = 0.5\\).",
+   "answer": {
+    "keep": 95,
+    "why": "a setup fact with hyperparameters: keep",
+    "values": [
+     "1800",
+     "0.01",
+     "32",
+     "1",
+     "0.5"
+    ]
+   }
+  },
+  {
+   "paper": "2fgzf8u5fP",
+   "cid": "paper/main_arxiv.tex#s-4a51420c",
+   "label": "setup",
+   "block": "kind: sentence\nsection: Preliminaries and Goal > Diffusion Models > Notation\nsentence before: After learning the backward process, we can sample from a distribution that emulates training data distribution (i.e., p(x)) by sequentially sampling p_t _t=T^0 from t=T to t=0.\ntext: The notation δ_a denotes a Dirac delta distribution centered at a.",
+   "answer": {
+    "keep": 90,
+    "why": "a definition: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "1R5BcYS8EC",
+   "cid": "paper/main.tex#s-d6c5c6f3",
+   "label": "background",
+   "block": "kind: sentence\nsection: Related Work\nsentence before: Previous work has explored multimodal timeseries forecasting where auxiliary text data is introduced as covariates to improve the forecasting accuracy (Rodrigues et al., 2019; emami2023modality; Jin ...\ntext: Notably, Time-LLM (Jin et al., 2024) ``reprograms'' an LLM to process both text prompts and timeseries.",
+   "answer": {
+    "keep": 5,
+    "why": "background about other work: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "GjM61KRiTG",
+   "cid": "paper/preprint.tex#s-1a72d414",
+   "label": "junk",
+   "block": "kind: sentence\nsection: Experiment > Evaluation Setup\nsentence before: We apply this benchmark to publicly available 7B-level models that have shown strong helpfulness scores in previous studies (eval-harness; dubois2024alpacafarm), and present the performance in Figure ...\ntext: Overall Evaluation Metrics.",
+   "answer": {
+    "keep": 3,
+    "why": "a heading: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "GjM61KRiTG",
+   "cid": "paper/preprint.tex#s-201cb643",
+   "label": "junk",
+   "block": "kind: sentence\nsection: Experiment > Improve Pre-aligned Models with Red Teaming Data\nsentence before: This process results in 1.5K harmful prompts, responses, safety labels for each response, and pairwise helpfulness preferences.\ntext: Results. Table 2 shows the results.",
+   "answer": {
+    "keep": 5,
+    "why": "a pointer to a table that states no result: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "UIFAJZ22ZF",
+   "cid": "paper/neurips_data_2024.tex#s-f687ba84",
+   "label": "junk",
+   "block": "kind: sentence\nsection: Checklist\nsentence before: Appendix section A.3..\ntext: Have you read the ethics review guidelines and ensured that your paper conforms to them?",
+   "answer": {
+    "keep": 2,
+    "why": "checklist text: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic, written for whole-table candidates",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: table\ntext: Table 2: Accuracy (%) on the test sets, mean of 3 seeds. Best in bold. Columns: Method | MMLU | GSM8K | HumanEval. Rows: Method: Base; MMLU: 61.2; GSM8K: 48.0; HumanEval: 30.5 || Method: + retrieval; MMLU: 64.8; GSM8K: 51.3; HumanEval: 31.1 || Method: Ours; MMLU: 67.9; GSM8K: 55.6; HumanEval: 34.0",
+   "answer": {
+    "keep": 95,
+    "why": "a table of results: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic, written for whole-table candidates",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: table\ntext: Table 5: Hyperparameters of the fine-tuning runs. Columns: Hyperparameter | Value. Rows: Hyperparameter: Optimizer; Value: AdamW || Hyperparameter: Learning rate; Value: 2e-5 || Hyperparameter: Batch size; Value: 64 || Hyperparameter: Epochs; Value: 3 || Hyperparameter: Warmup steps; Value: 500 || Hyperparameter: Hardware; Value: 8 A100 GPUs",
+   "answer": {
+    "keep": 92,
+    "why": "a table of the training setup and hyperparameters: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: The effect of the treatment is 0.42 (95% CI 0.31 to 0.53, n = 212).",
+   "answer": {
+    "keep": 95,
+    "why": "a statistical result: keep",
+    "values": [
+     "0.42",
+     "0.31",
+     "0.53"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: With retrieval, the 7B model answers 68.4% of the questions correctly, against 61.0% without it.",
+   "answer": {
+    "keep": 95,
+    "why": "a machine-learning result: keep",
+    "values": [
+     "68.4",
+     "61.0"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Fine-tuning on the filtered set lowers the Brier score from 0.204 to 0.193.",
+   "answer": {
+    "keep": 95,
+    "why": "a comparison of runs: keep",
+    "values": [
+     "0.204",
+     "0.193"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Our model reaches 84% on the benchmark, 3 points above the 81% that Lee et al. (2023) report.",
+   "answer": {
+    "keep": 95,
+    "why": "a comparison with cited work: keep",
+    "values": [
+     "84",
+     "3"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: As Lee et al. (2023) found for larger models, our ablation shows that the gain comes from the retrieved passages, not from their length.",
+   "answer": {
+    "keep": 92,
+    "why": "a claim that uses a cited conclusion: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Participants who saw the warning shared 30% fewer false headlines than the control group.",
+   "answer": {
+    "keep": 95,
+    "why": "a behavioural result: keep",
+    "values": [
+     "30"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: The sample's melting point is 412.3 K, within 0.5 K of the value in the reference table.",
+   "answer": {
+    "keep": 95,
+    "why": "a scientific measurement: keep",
+    "values": [
+     "412.3",
+     "0.5"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Retrieval raises accuracy at all three model sizes.",
+   "answer": {
+    "keep": 92,
+    "why": "a middle-level claim: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Retrieval improves factual accuracy.",
+   "answer": {
+    "keep": 90,
+    "why": "a high-level conclusion: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: The trained model hedges less often, and states its confidence as a number.",
+   "answer": {
+    "keep": 90,
+    "why": "a qualitative observation: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Accuracy seems to rise with more rounds, but the last two points overlap.",
+   "answer": {
+    "keep": 90,
+    "why": "a hedged trend, a claim with a hedge: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: commit message\ntext: Reran the eval with 5 seeds: accuracy is 71.2% (sd 0.8), up from 69.0% with 1 seed.",
+   "answer": {
+    "keep": 95,
+    "why": "a commit message that states a result: keep",
+    "values": [
+     "71.2",
+     "69.0"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: We use gemini-2.5-pro as the judge, with temperature 0.",
+   "answer": {
+    "keep": 92,
+    "why": "a description of the research setup: keep",
+    "values": [
+     "0"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: A logistic regression is used for the classification task.",
+   "answer": {
+    "keep": 88,
+    "why": "a description of the research setup: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: A two-sided Wilcoxon test is applied to the paired scores.",
+   "answer": {
+    "keep": 88,
+    "why": "a description of the research setup: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: We define the calibration error as the mean absolute gap between confidence and accuracy.",
+   "answer": {
+    "keep": 92,
+    "why": "a definition: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: Next, we will run the same evaluation on Llama 4.",
+   "answer": {
+    "keep": 5,
+    "why": "a plan or future work: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: 2025-09-02: TCEA transfer results",
+   "answer": {
+    "keep": 3,
+    "why": "a heading: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: commit message\ntext: feat: GTA results for trained models",
+   "answer": {
+    "keep": 4,
+    "why": "a commit subject that is a heading: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: commit message\ntext: Initial commit: code, no results yet.",
+   "answer": {
+    "keep": 2,
+    "why": "a commit message with no finding: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: commit message\ntext: Refactor the data loader.",
+   "answer": {
+    "keep": 2,
+    "why": "a commit message with no finding: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: commit message\ntext: Add configs for the 70B runs.",
+   "answer": {
+    "keep": 4,
+    "why": "a commit message with no finding: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: Source: `data/runs/QJ.C.DI/*/`",
+   "answer": {
+    "keep": 3,
+    "why": "a pointer: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: Figure 3 shows the calibration plots.",
+   "answer": {
+    "keep": 6,
+    "why": "a pointer that states no result: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: Source commit: truthseekinggym 3bcebf8.",
+   "answer": {
+    "keep": 2,
+    "why": "provenance metadata: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: This file describes the structure of the results folder.",
+   "answer": {
+    "keep": 4,
+    "why": "a description of a document: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "background",
+   "block": "kind: sentence\ntext: Lee et al. (2023) report 81% accuracy on this benchmark.",
+   "answer": {
+    "keep": 6,
+    "why": "background, a cited result: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "background",
+   "block": "kind: sentence\ntext: Earlier work found that larger models are better calibrated (Kim, 2022).",
+   "answer": {
+    "keep": 5,
+    "why": "background, a cited conclusion: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "background",
+   "block": "kind: sentence\ntext: Several groups have studied sycophancy in chat models.",
+   "answer": {
+    "keep": 4,
+    "why": "background, a discussion of the literature: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: We expect the gap to shrink at larger scale.",
+   "answer": {
+    "keep": 8,
+    "why": "an expectation or hypothesis to test: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: Does the effect hold for smaller models?",
+   "answer": {
+    "keep": 5,
+    "why": "a question: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: Remove the rows with missing data, then report R squared.",
+   "answer": {
+    "keep": 4,
+    "why": "an instruction or to-do: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: Teams should prefer the larger judge for this task.",
+   "answer": {
+    "keep": 7,
+    "why": "a recommendation: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: commit message\ntext: Reran the job after the cluster outage on 3 March.",
+   "answer": {
+    "keep": 3,
+    "why": "bookkeeping: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: python train.py --lr 3e-4 --seed 1",
+   "answer": {
+    "keep": 2,
+    "why": "a command copied into the notes: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: We thank the annotators for their help.",
+   "answer": {
+    "keep": 2,
+    "why": "thanks and credits: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "junk",
+   "block": "kind: sentence\ntext: 0.27",
+   "answer": {
+    "keep": 3,
+    "why": "a number alone, cut from its sentence: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "background",
+   "block": "kind: sentence\ntext: Retrieval-augmented models are now the common approach for open-domain question answering.",
+   "answer": {
+    "keep": 5,
+    "why": "background with no citation: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "background",
+   "block": "kind: sentence\ntext: Prior methods do not handle inputs whose channel layout changes between data sets.",
+   "answer": {
+    "keep": 5,
+    "why": "background with no citation: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "background",
+   "block": "kind: sentence\ntext: Ring attractors are known to support a stable spatial memory in animal brains.",
+   "answer": {
+    "keep": 5,
+    "why": "background with no citation: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Because the scheduler stores one buffer per layer, its memory use grows linearly with depth, not quadratically.",
+   "answer": {
+    "keep": 90,
+    "why": "a claim about the method's cost: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: The adapter can be attached to any encoder that outputs a sequence of vectors, without retraining the encoder.",
+   "answer": {
+    "keep": 88,
+    "why": "a claim about what the method can do: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "claim",
+   "block": "kind: sentence\ntext: Our main contribution is a training method that removes the need for a separate reward model.",
+   "answer": {
+    "keep": 85,
+    "why": "a contribution claim: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: We now describe our approach in more detail.",
+   "answer": {
+    "keep": 10,
+    "why": "setup text that states no specific fact: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: To address these challenges, we propose a simple and general framework that builds on recent advances in representation learning.",
+   "answer": {
+    "keep": 12,
+    "why": "a general description of the approach: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: This design keeps the method easy to extend to new tasks.",
+   "answer": {
+    "keep": 15,
+    "why": "motivation for a design choice: drop",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: We report exact match and F1 on the held-out split, and the expected calibration error with 15 bins.",
+   "answer": {
+    "keep": 85,
+    "why": "the metrics used: keep",
+    "values": [
+     "15"
+    ]
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: We compare against three baselines: nearest-neighbour retrieval, a fine-tuned BERT classifier, and zero-shot prompting.",
+   "answer": {
+    "keep": 85,
+    "why": "the baselines compared against: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: sentence\ntext: The ListOps task (Nangia and Bowman, 2018) asks the model to evaluate nested lists of operations on single digits.",
+   "answer": {
+    "keep": 80,
+    "why": "a cited task this project uses: keep",
+    "values": []
+   }
+  },
+  {
+   "paper": "generic examples",
+   "cid": "",
+   "label": "setup",
+   "block": "kind: figure caption\ntext: Figure 2: Training loss of the 1B model on the code dataset, with batch size 256 and learning rate 3e-4.",
+   "answer": {
+    "keep": 80,
+    "why": "a caption that states the setup: keep",
+    "values": [
+     "256"
+    ]
+   }
+  }
+ ]
+}

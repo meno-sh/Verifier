@@ -1,0 +1,1182 @@
+{
+  "commit": "cccccccccccccccccccccccccccccccccccccccc",
+  "findings": {
+    "claim_checks_not_run_because": null,
+    "claims": [
+      {
+        "checks": {
+          "baseline": {
+            "measured": null,
+            "type": "Passed"
+          },
+          "caption": {
+            "measured": null,
+            "type": "Passed"
+          },
+          "comparability": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "compared against prior but judge.model also differs ('claude-haiku-4.5' vs 'gpt-4o')",
+                "facts": [],
+                "kind": "undeclared-difference",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          },
+          "interval": {
+            "because": "the computational method gives no interval",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "measured": null,
+            "type": "Passed"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "measured": null,
+            "type": "Passed"
+          }
+        },
+        "claim": {
+          "fields": {
+            "baseline": 0.25,
+            "baseline_n": 4,
+            "caption_model": "Qwen3-8B",
+            "claimed_significant": true,
+            "compare_to": "prior",
+            "config": {
+              "judge": {
+                "model": "claude-haiku-4.5"
+              },
+              "model": "Qwen3-8B",
+              "training": "rl"
+            },
+            "lower_is_better": true,
+            "model": "Qwen3-8B",
+            "seeds": 3,
+            "varies": [
+              "training"
+            ]
+          },
+          "id": "good",
+          "origin": null,
+          "setup": {
+            "model": "Qwen3-8B"
+          },
+          "source": {
+            "method": "trained_brier_post",
+            "path": "<working-directory>/runs/main/results.json",
+            "proposed_sha256": null,
+            "sha256": "e922e7a439601298764f9cef782ba2d654538be8bc591606874503f26c5f0f5e"
+          },
+          "statement": "Training lowers the Brier score to 0.075 on the main run.",
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.075
+        },
+        "provenance": {
+          "path": "<working-directory>/runs/main/results.json",
+          "type": "Intact"
+        },
+        "recompute": {
+          "interval": null,
+          "n": 4,
+          "tolerance": 0.001,
+          "type": "Matches",
+          "value": 0.07500000000000001
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "does not beat the trivial baseline: scored 0.205 against a baseline of 0.200, and lower is better here, so this result is no better than always predicting the base rate",
+                "facts": [],
+                "kind": "below-baseline",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          },
+          "caption": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "caption says model 'Llama-3-8B', run setup says 'Qwen3-8B'",
+                "facts": [],
+                "kind": "caption-names-other-model",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          },
+          "comparability": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "compared against good but judge.model also differs ('gpt-4o' vs 'claude-haiku-4.5')",
+                "facts": [],
+                "kind": "undeclared-difference",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          },
+          "interval": {
+            "because": "the computational method gives no interval",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "scored episodes dropped to 4 from 10 -- measurement may be destroyed, not improved",
+                "facts": [],
+                "kind": "sample-shrank",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "only 1 seed(s); the text must not claim reliability",
+                "facts": [],
+                "kind": "too-few-seeds",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          }
+        },
+        "claim": {
+          "fields": {
+            "baseline": 0.2,
+            "baseline_n": 10,
+            "caption_model": "Llama-3-8B",
+            "compare_to": "good",
+            "config": {
+              "judge": {
+                "model": "gpt-4o"
+              },
+              "model": "Qwen3-8B",
+              "training": "none"
+            },
+            "lower_is_better": true,
+            "model": "Qwen3-8B",
+            "seeds": 1,
+            "varies": [
+              "training"
+            ]
+          },
+          "id": "prior",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "method": "trained_brier_pre",
+            "path": "<working-directory>/runs/main/results.json",
+            "proposed_sha256": null,
+            "sha256": null
+          },
+          "statement": "The untrained model has a Brier score of 0.205.",
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.205
+        },
+        "provenance": {
+          "path": "<working-directory>/runs/main/results.json",
+          "type": "Intact"
+        },
+        "recompute": {
+          "interval": null,
+          "n": 4,
+          "tolerance": 0.001,
+          "type": "Matches",
+          "value": 0.20500000000000002
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "caption": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "comparability": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "interval": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_data": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_integrity": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_outputs": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "seeds": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "disagrees",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "method": "trained_brier_post",
+            "path": "<working-directory>/runs/main/results.json",
+            "proposed_sha256": null,
+            "sha256": null
+          },
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.2
+        },
+        "provenance": {
+          "path": "<working-directory>/runs/main/results.json",
+          "type": "Intact"
+        },
+        "recompute": {
+          "n": 4,
+          "paper_value": 0.2,
+          "tolerance": 0.1,
+          "type": "Disagrees",
+          "value": 0.07500000000000001
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "caption": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "comparability": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "interval": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_data": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_integrity": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_outputs": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "seeds": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "missing",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "method": "trained_brier_post",
+            "path": "<working-directory>/runs/gone/*.json",
+            "proposed_sha256": null,
+            "sha256": null
+          },
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.075
+        },
+        "provenance": {
+          "path": "<working-directory>/runs/gone/*.json",
+          "type": "Missing"
+        },
+        "recompute": {
+          "because": "not recomputed: provenance failed",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "caption": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "comparability": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "interval": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_data": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_integrity": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_outputs": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "seeds": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "tampered",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "method": "trained_brier_post",
+            "path": "<working-directory>/runs/main/results.json",
+            "proposed_sha256": null,
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.075
+        },
+        "provenance": {
+          "actual_sha256": "e922e7a439601298764f9cef782ba2d654538be8bc591606874503f26c5f0f5e",
+          "expected_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "file": "results.json",
+          "type": "Changed"
+        },
+        "recompute": {
+          "because": "not recomputed: provenance failed",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "caption": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "comparability": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "interval": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_data": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_integrity": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_outputs": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "seeds": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "setup-mismatch",
+          "origin": null,
+          "setup": {
+            "model": "Qwen3-32B"
+          },
+          "source": {
+            "method": "trained_brier_post",
+            "path": "<working-directory>/runs/main/results.json",
+            "proposed_sha256": null,
+            "sha256": null
+          },
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.075
+        },
+        "provenance": {
+          "path": "<working-directory>/runs/main/results.json",
+          "type": "Intact"
+        },
+        "recompute": {
+          "field": "model",
+          "paper_says": "Qwen3-32B",
+          "record_says": "Qwen3-8B",
+          "type": "SetupDisagrees"
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "missing": "baseline",
+            "type": "NotChecked"
+          },
+          "caption": {
+            "missing": "model",
+            "type": "NotChecked"
+          },
+          "comparability": {
+            "missing": "compare_to",
+            "type": "NotChecked"
+          },
+          "interval": {
+            "because": "not recomputed: traced to a log on purpose",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "missing": "baseline_n",
+            "type": "NotChecked"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "missing": "seeds",
+            "type": "NotChecked"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "traced",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "must_contain": "brier 0.257",
+            "path": "<working-directory>/logs/run.md",
+            "why": "parser-superseded"
+          },
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.257
+        },
+        "provenance": {
+          "anchor": "brier 0.257",
+          "path": "<working-directory>/logs/run.md",
+          "reason": "parser-superseded",
+          "type": "Traced"
+        },
+        "recompute": {
+          "because": "not recomputed: traced to a log on purpose",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "caption": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "comparability": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "interval": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_data": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_integrity": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "run_outputs": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          },
+          "seeds": {
+            "because": "provenance or recompute failed for this claim",
+            "type": "Skipped"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "anchor-gone",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "must_contain": "brier 0.999",
+            "path": "<working-directory>/logs/run.md",
+            "why": "parser-superseded"
+          },
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.257
+        },
+        "provenance": {
+          "anchor": "brier 0.999",
+          "path": "<working-directory>/logs/run.md",
+          "type": "AnchorMissing"
+        },
+        "recompute": {
+          "because": "not recomputed: provenance failed",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "baseline": {
+            "missing": "baseline",
+            "type": "NotChecked"
+          },
+          "caption": {
+            "missing": "model",
+            "type": "NotChecked"
+          },
+          "comparability": {
+            "missing": "compare_to",
+            "type": "NotChecked"
+          },
+          "interval": {
+            "because": "not recomputed: the claim register gives no source",
+            "type": "Skipped"
+          },
+          "measurement": {
+            "missing": "baseline_n",
+            "type": "NotChecked"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "missing": "seeds",
+            "type": "NotChecked"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "no-source",
+          "origin": null,
+          "setup": null,
+          "source": null,
+          "statement": null,
+          "superseded_by": null,
+          "tol": null,
+          "value": 0.5
+        },
+        "provenance": {
+          "type": "NoSource"
+        },
+        "recompute": {
+          "because": "not recomputed: the claim register gives no source",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "acyclic_support": {
+            "measured": null,
+            "type": "Passed"
+          },
+          "caption": {
+            "missing": "model",
+            "type": "NotChecked"
+          },
+          "claim_uncertainty": {
+            "type": "Off"
+          },
+          "comparability": {
+            "missing": "compare_to",
+            "type": "NotChecked"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "missing": "seeds",
+            "type": "NotChecked"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "general",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "claims": [
+              "good",
+              "prior"
+            ]
+          },
+          "statement": "Training improves the Brier score over the untrained model.",
+          "superseded_by": null,
+          "tol": null,
+          "value": null
+        },
+        "provenance": {
+          "claims": [
+            "good",
+            "prior"
+          ],
+          "type": "Derived"
+        },
+        "recompute": {
+          "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "acyclic_support": {
+            "measured": null,
+            "type": "Passed"
+          },
+          "caption": {
+            "missing": "model",
+            "type": "NotChecked"
+          },
+          "claim_uncertainty": {
+            "type": "Off"
+          },
+          "comparability": {
+            "missing": "compare_to",
+            "type": "NotChecked"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "missing": "seeds",
+            "type": "NotChecked"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "headline",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "claims": [
+              "general"
+            ]
+          },
+          "statement": "Training improves calibration.",
+          "superseded_by": null,
+          "tol": null,
+          "value": null
+        },
+        "provenance": {
+          "claims": [
+            "general"
+          ],
+          "type": "Derived"
+        },
+        "recompute": {
+          "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "acyclic_support": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "loop-a is inferred from itself: loop-a -> loop-b -> loop-a",
+                "facts": [],
+                "kind": "circular-support",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          },
+          "caption": {
+            "missing": "model",
+            "type": "NotChecked"
+          },
+          "claim_uncertainty": {
+            "type": "Off"
+          },
+          "comparability": {
+            "missing": "compare_to",
+            "type": "NotChecked"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "missing": "seeds",
+            "type": "NotChecked"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "loop-a",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "claims": [
+              "loop-b"
+            ]
+          },
+          "statement": "This claim rests on loop-b.",
+          "superseded_by": null,
+          "tol": null,
+          "value": null
+        },
+        "provenance": {
+          "claims": [
+            "loop-b"
+          ],
+          "type": "Derived"
+        },
+        "recompute": {
+          "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+          "type": "Skipped"
+        }
+      },
+      {
+        "checks": {
+          "acyclic_support": {
+            "measured": null,
+            "problems": [
+              {
+                "detail": "loop-b is inferred from itself: loop-b -> loop-a -> loop-b",
+                "facts": [],
+                "kind": "circular-support",
+                "where": null
+              }
+            ],
+            "type": "Flagged"
+          },
+          "caption": {
+            "missing": "model",
+            "type": "NotChecked"
+          },
+          "claim_uncertainty": {
+            "type": "Off"
+          },
+          "comparability": {
+            "missing": "compare_to",
+            "type": "NotChecked"
+          },
+          "run_data": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_integrity": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "run_outputs": {
+            "missing": "run",
+            "type": "NotChecked"
+          },
+          "seeds": {
+            "missing": "seeds",
+            "type": "NotChecked"
+          }
+        },
+        "claim": {
+          "fields": {},
+          "id": "loop-b",
+          "origin": null,
+          "setup": null,
+          "source": {
+            "claims": [
+              "loop-a"
+            ]
+          },
+          "statement": "This claim rests on loop-a.",
+          "superseded_by": null,
+          "tol": null,
+          "value": null
+        },
+        "provenance": {
+          "claims": [
+            "loop-a"
+          ],
+          "type": "Derived"
+        },
+        "recompute": {
+          "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+          "type": "Skipped"
+        }
+      }
+    ],
+    "inputs": {
+      "claim_register_base": "<working-directory>",
+      "claim_register_path": "<working-directory>/.verifier/claim_register.json",
+      "claim_register_sha256": "684311f24ba0e1e4543723ababdc05c21fbb9e171f929b5ab117642d18eee4d3",
+      "paper_paths": [],
+      "paper_sha256": null,
+      "switched_off": [],
+      "tool_commit": "<verifier-commit>"
+    },
+    "must_run": [
+      "model_review",
+      "setup_review"
+    ],
+    "papers": {},
+    "superseded": [],
+    "unreadable_claims": [
+      {
+        "entry": 8,
+        "id": "bad-reason",
+        "reason": "claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired"
+      },
+      {
+        "entry": 11,
+        "id": "unknown-method",
+        "reason": "claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are mean_post, trained_brier_post, trained_brier_pre"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "axis": "missing_inputs",
+      "code": "claim-unreadable",
+      "detail": "claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired",
+      "disputable": false,
+      "disputed": null,
+      "facts": [],
+      "id": "F-f47ad1",
+      "impact": "cannot be disputed",
+      "measured": null,
+      "subject": "entry 8 (bad-reason)"
+    },
+    {
+      "axis": "missing_inputs",
+      "code": "claim-unreadable",
+      "detail": "claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are mean_post, trained_brier_post, trained_brier_pre",
+      "disputable": false,
+      "disputed": null,
+      "facts": [],
+      "id": "F-4bb20e",
+      "impact": "cannot be disputed",
+      "measured": null,
+      "subject": "entry 11 (unknown-method)"
+    },
+    {
+      "axis": "strength",
+      "code": "undeclared-difference",
+      "detail": "compared against prior but judge.model also differs ('claude-haiku-4.5' vs 'gpt-4o')",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-f8dc80",
+      "impact": "low",
+      "measured": null,
+      "subject": "good (value 0.075)"
+    },
+    {
+      "axis": "presentation",
+      "code": "caption-names-other-model",
+      "detail": "caption says model 'Llama-3-8B', run setup says 'Qwen3-8B'",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-6c8d68",
+      "impact": "high",
+      "measured": null,
+      "subject": "prior (value 0.205)"
+    },
+    {
+      "axis": "strength",
+      "code": "below-baseline",
+      "detail": "does not beat the trivial baseline: scored 0.205 against a baseline of 0.200, and lower is better here, so this result is no better than always predicting the base rate",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-da9073",
+      "impact": "low",
+      "measured": null,
+      "subject": "prior (value 0.205)"
+    },
+    {
+      "axis": "strength",
+      "code": "too-few-seeds",
+      "detail": "only 1 seed(s); the text must not claim reliability",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-751760",
+      "impact": "low",
+      "measured": null,
+      "subject": "prior (value 0.205)"
+    },
+    {
+      "axis": "strength",
+      "code": "sample-shrank",
+      "detail": "scored episodes dropped to 4 from 10 -- measurement may be destroyed, not improved",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-3cb308",
+      "impact": "low",
+      "measured": null,
+      "subject": "prior (value 0.205)"
+    },
+    {
+      "axis": "strength",
+      "code": "undeclared-difference",
+      "detail": "compared against good but judge.model also differs ('gpt-4o' vs 'claude-haiku-4.5')",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-759ec3",
+      "impact": "low",
+      "measured": null,
+      "subject": "prior (value 0.205)"
+    },
+    {
+      "axis": "integrity",
+      "code": "number-disagrees",
+      "detail": "provenance: artifact present and matches its pinned checksum; recompute: the claim says 0.2, the data gives 0.075 (tolerance 0.1)",
+      "disputable": true,
+      "disputed": null,
+      "facts": [
+        [
+          "Paper",
+          "0.2"
+        ],
+        [
+          "Data",
+          "0.075"
+        ],
+        [
+          "Difference",
+          "-0.125"
+        ],
+        [
+          "Tolerance",
+          "0.1"
+        ]
+      ],
+      "id": "F-f3e838",
+      "impact": "high",
+      "measured": null,
+      "subject": "disagrees"
+    },
+    {
+      "axis": "integrity",
+      "code": "artifact-missing",
+      "detail": "provenance: file missing: runs/gone/*.json; recompute: not recomputed: provenance failed",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-2ec93d",
+      "impact": "high",
+      "measured": null,
+      "subject": "missing (value 0.075)"
+    },
+    {
+      "axis": "integrity",
+      "code": "hash-mismatch",
+      "detail": "provenance: checksum mismatch for results.json: file changed since it was recorded; recompute: not recomputed: provenance failed",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-f508cd",
+      "impact": "high",
+      "measured": null,
+      "subject": "tampered (value 0.075)"
+    },
+    {
+      "axis": "integrity",
+      "code": "setup-mismatch",
+      "detail": "provenance: artifact present and matches its pinned checksum; recompute: the claim says model='Qwen3-32B', the data's own record says 'Qwen3-8B'",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-edc31a",
+      "impact": "high",
+      "measured": null,
+      "subject": "setup-mismatch (value 0.075)"
+    },
+    {
+      "axis": "integrity",
+      "code": "anchor-missing",
+      "detail": "provenance: anchor not found in run.md: 'brier 0.999'; recompute: not recomputed: provenance failed",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-0f6aaf",
+      "impact": "high",
+      "measured": null,
+      "subject": "anchor-gone (value 0.257)"
+    },
+    {
+      "axis": "soundness",
+      "code": "circular-support",
+      "detail": "loop-a is inferred from itself: loop-a -> loop-b -> loop-a",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-25f927",
+      "impact": "high",
+      "measured": null,
+      "subject": "loop-a (inferred from loop-b)"
+    },
+    {
+      "axis": "soundness",
+      "code": "circular-support",
+      "detail": "loop-b is inferred from itself: loop-b -> loop-a -> loop-b",
+      "disputable": true,
+      "disputed": null,
+      "facts": [],
+      "id": "F-24ca35",
+      "impact": "high",
+      "measured": null,
+      "subject": "loop-b (inferred from loop-a)"
+    },
+    {
+      "axis": "caveat",
+      "code": "no-source",
+      "detail": "no source declared",
+      "disputable": false,
+      "disputed": null,
+      "facts": [],
+      "id": "F-c8c2a6",
+      "impact": "cannot be disputed",
+      "measured": null,
+      "subject": "no-source (value 0.5)"
+    }
+  ],
+  "methods_ran_in": "the standard library only (no uv.lock)",
+  "report_id": "0f7700285aa5",
+  "run_error": null,
+  "verdict": "MISSING INPUTS",
+  "verdict_without_disputed": null
+}

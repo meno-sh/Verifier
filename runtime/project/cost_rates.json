@@ -1,0 +1,31 @@
+{
+ "about": "Best guesses of the cost and time of a first round, with the default models and the default parallelism of 64. They come from the spending record (`verifier status`) of the first rounds of 23 and 24 Nov 2026, after code began to write the claim register. Replace them with rates from the spending record of new runs.",
+ "parts": {
+  "agent": {
+   "what": "the auditing agent (Kimi K3)",
+   "fixed_dollars": 0.2,
+   "dollars_per_candidate": 0.0,
+   "fixed_minutes": 3,
+   "minutes_per_candidate": 0.0,
+   "source": "The `agent` line of the spending record. coherence.tex, 412 candidates: $0.12 to $0.31 in 4 runs, rounds of 0.5 to 2.2 min. A paper, 321 candidates: $0.01. Martingale-Training (paper with code and data), 576 candidates: $2.11, a round of 8.6 min. TruthSeekingGym mini (notes, first commit), 3 candidates: $0.06. The agent cost follows the data sources that it must find, so a project with code and data costs more than a paper. A fixed rate fits these runs better than a rate per candidate."
+  },
+  "grouping_and_tools": {
+   "what": "the labeller, the grouping of duplicate claims, the claim order, the claim linker, the setup review and the method writer",
+   "fixed_dollars": 0.3,
+   "dollars_per_candidate": 0.0025,
+   "fixed_minutes": 0,
+   "minutes_per_candidate": 0.01,
+   "source": "The spending record less the agent and the uncertainty check. coherence.tex, 412 candidates: $1.88 (the linker $1.17, the setup review $0.42). Martingale-Training, 576 candidates: $2.46. A paper, 321 candidates: $0.75. The setup review costs about $0.4 for each LaTeX paper. With 64-way parallelism, the claim steps and the linker of coherence.tex took about 4 min."
+  },
+  "claim_uncertainty": {
+   "what": "the uncertainty check (red team, quantifier and scenario), for each claim that rests on other claims",
+   "dollars_per_claim": 0.045,
+   "minutes_per_claim": 0.075,
+   "claims_per_candidate": [
+    0.25,
+    0.55
+   ],
+   "source": "The quantifier, red_team and scenario lines of the spending record. coherence.tex: 227 such claims of 412 candidates (0.55), $9.51, $0.042 a claim. A paper: 90 of 321 (0.28), $4.44, $0.049 a claim. Martingale-Training: 174 of 576 (0.30), $8.18, $0.047 a claim. With 64-way parallelism, coherence.tex took 23.6 min in all, of which about 17 min went to the final vcheck run and its uncertainty check. The low end 0.25 is a little under the lowest ratio seen (0.28)."
+  }
+ }
+}

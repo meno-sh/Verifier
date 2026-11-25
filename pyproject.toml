@@ -1,0 +1,184 @@
+[project]
+name = "verifier"
+version = "0.1.0"
+description = "Check a research paper for mistakes before you post or submit it."
+readme = "README.md"
+license = "MIT"                 # the text is in LICENSE, which setuptools adds itself
+requires-python = ">=3.13"
+dependencies = ["typst>=0.15,<0.16"]   # compiles the PDF report; the checks use only the standard library
+
+[project.scripts]
+verifier = "runtime.cli:main"        # start, watch and stop the real-time verifier
+vcheck = "core.cli:main"             # the auditing agent's way into the deterministic core
+vjob = "runtime.agent.jobs:vjob_main"   # run and watch the agent's long jobs
+vwake = "runtime.agent.jobs:vwake_main" # wake the agent once, later
+
+[build-system]
+requires = ["setuptools>=77"]   # 77 reads the SPDX `license` expression
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "evaluation*"]   # the evals are not part of the installed commands
+namespaces = false              # only folders with __init__.py, so build/ and docs/ stay out
+
+[tool.setuptools.package-data]
+"core.claim_steps" = ["label_examples.json"]
+diagnosis = ["guide.md"]
+runtime = ["templates/*"]
+"runtime.project" = ["cost_rates.json"]
+utils = ["model_names.txt", "model_keys.json"]
+web = ["page.html"]
+
+[dependency-groups]
+dev = ["ruff>=0.15", "mypy>=1.18"]   # lint, and the type check of the refactored modules
+
+# Lint settings, on Python 3.13.
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+# docs and the testbeds hold research scripts and saved runs, not the verifier's code.
+# evaluation/stage2-ab holds bench scripts copied as-is from a local experiment.
+extend-exclude = ["docs", "evaluation/tests/testbeds", "evaluation/examples",
+                  "evaluation/stage2-ab"]
+
+[tool.ruff.lint]
+# E/F: pycodestyle+pyflakes. I: import sorting. B: bugbear. UP: pyupgrade.
+# SIM: simplify. BLE: no blind except. ANN: type annotations. D: docstrings.
+# TID: ban relative imports (absolute-only house style).
+select = ["E", "F", "I", "B", "UP", "SIM", "BLE", "ANN", "D", "TID"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests need neither full type annotations nor docstrings.
+"tests/**" = ["ANN", "D"]
+"evaluation/tests/**" = ["ANN", "D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+# `mypy --strict` checks the modules that the OOP refactor rewrote. tests/test_type_check.py
+# runs it, so CI runs it with the other tests. Each step of the refactor adds the modules it
+# rewrites. Imported modules that are not listed are read for their types, and their own
+# errors are not reported.
+[tool.mypy]
+strict = true
+follow_imports = "silent"
+files = [
+    "schema/errors.py",
+    "schema/primitives.py",
+    "schema/provenance.py",
+    "schema/recompute.py",
+    "schema/claim/claim_register_parser.py",
+    "schema/claim/claim_links.py",
+    "schema/claim/claim_entry_reader.py",
+    "core/registry/checks.py",
+    "core/registry/run_options.py",
+    "checks/interface.py",
+    "checks/extension.py",
+    "core/methods/computational_methods.py",
+    "core/registry/plugin_checks.py",
+    "core/registry/extensions.py",
+    "core/cli_command.py",
+    "core/gate/artifact_pins.py",
+    "core/gate/provenance.py",
+    "core/gate/recompute.py",
+    "utils/checksums.py",
+    "utils/version.py",
+    "core/analysis/analysis_request.py",
+    "core/analysis/findings_analyzer.py",
+    "core/analysis/document_checker.py",
+    "core/analysis/claim_checker.py",
+    "core/analysis/verdict_policy.py",
+    "core/analysis/findings_json.py",
+    "core/project/watched_project.py",
+    "core/project/agent_session.py",
+    "core/report_model/issues.py",
+    "core/report_model/issue_collector.py",
+    "core/report_model/issue_grouping.py",
+    "core/report_model/disputed_flags.py",
+    "core/report_model/measured_numbers.py",
+    "core/report_model/checks_not_run.py",
+    "core/report_model/report_header.py",
+    "core/report_model/axis.py",
+    "core/report_model/triage_board.py",
+    "core/report_model/verdict_explainer.py",
+    "core/report_model/verification_report.py",
+    "core/report_model/report_builder.py",
+    "utils/text.py",
+    "core/commands/run.py",
+    "core/project/check_runs.py",
+    "core/commands/check_quotes.py",
+    "core/commands/check_register.py",
+    "core/commands/fields.py",
+    "core/commands/propose_classes.py",
+    "core/commands/drop_non_claims.py",
+    "core/commands/label_candidates.py",
+    "core/commands/accept_classes.py",
+    "core/commands/fill_register.py",
+    "core/claim_steps/claim_reordering.py",
+    "core/commands/reorder_claims.py",
+    "core/commands/test_check.py",
+    "core/commands/test_method.py",
+    "core/commands/validate.py",
+    "core/commands/write_methods.py",
+    "core/methods/method_writer.py",
+    "core/methods/source_index.py",
+    "core/analysis/check_result_cache.py",
+    "core/commands/clear_cache.py",
+    "utils/text_search.py",
+    "core/commands/shortlist_sources.py",
+    "runtime/commands/alerts.py",
+    "runtime/commands/attach.py",
+    "runtime/commands/diff.py",
+    "runtime/commands/init.py",
+    "runtime/commands/report.py",
+    "runtime/commands/start.py",
+    "runtime/commands/start_if_pending.py",
+    "runtime/commands/static_check.py",
+    "runtime/commands/status.py",
+    "runtime/commands/stop.py",
+    "runtime/commands/uninstall.py",
+    "runtime/cli.py",
+    "runtime/agent/inbox.py",
+    "runtime/agent/rounds.py",
+    "utils/file_storage.py",
+    "utils/computed_state.py",
+    "utils/model_names.py",
+    "utils/run_configs.py",
+    "runtime/project/first_round_estimate.py",
+    "utils/timestamps.py",
+    "diagnosis/records.py",
+    "diagnosis/dispute_store.py",
+    "diagnosis/diagnosis_document.py",
+    "diagnosis/diagnosis_file_check.py",
+    "diagnosis/dispute_states.py",
+    "diagnosis/share_file.py",
+    "diagnosis/agent_events.py",
+    "diagnosis/commands.py",
+    "review/types.py",
+    "review/store.py",
+    "review/kinds/base.py",
+    "review/kinds/__init__.py",
+    "review/kinds/file_regenerated.py",
+    "review/states.py",
+    "review/recorder.py",
+    "review/claim_checks.py",
+    "review/channels/cli.py",
+    "review/agent_events.py",
+    "review/commands.py",
+    "review/extension.py",
+    "diagnosis/extension.py",
+    "schema/verdict.py",
+    "core/report_output/markdown_renderer.py",
+    "core/report_output/typst_renderer.py",
+    "core/report_output/typst_template.py",
+    "core/report_output/terminal_printer.py",
+    "core/report_output/saved_report.py",
+    "core/report_output/report_store.py",
+    "core/report_output/report_comparer.py",
+    "runtime/commands/web.py",
+    "web/run_library.py",
+    "web/server.py",
+]

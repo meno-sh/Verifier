@@ -1,0 +1,42 @@
+{
+  "commit": "cccccccccccccccccccccccccccccccccccccccc",
+  "findings": {
+    "claim_checks_not_run_because": "vcheck label-candidates failed (exit 1): error: a model call failed, so no label was written",
+    "claims": [],
+    "inputs": {
+      "claim_register_base": null,
+      "claim_register_path": null,
+      "claim_register_sha256": null,
+      "paper_paths": [],
+      "paper_sha256": null,
+      "switched_off": [],
+      "tool_commit": "<verifier-commit>"
+    },
+    "must_run": [
+      "model_review",
+      "setup_review"
+    ],
+    "papers": {},
+    "superseded": [],
+    "unreadable_claims": []
+  },
+  "issues": [
+    {
+      "axis": "missing_inputs",
+      "code": "claim-checks-not-run",
+      "detail": "vcheck label-candidates failed (exit 1): error: a model call failed, so no label was written",
+      "disputable": false,
+      "disputed": null,
+      "facts": [],
+      "id": "F-8c61a1",
+      "impact": "cannot be disputed",
+      "measured": null,
+      "subject": "claim checks"
+    }
+  ],
+  "methods_ran_in": "the standard library only (no uv.lock)",
+  "report_id": "c1bcea648434",
+  "run_error": null,
+  "verdict": "MISSING INPUTS",
+  "verdict_without_disputed": null
+}

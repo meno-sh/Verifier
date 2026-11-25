@@ -1,0 +1,3744 @@
+{
+  "no_methods": {
+    "board": {
+      "caveat": [
+        {
+          "code": "duplicate-label",
+          "detail": "broken_paper.tex: label 'tab:one' is defined more than once; references to it are ambiguous"
+        },
+        {
+          "code": "interval-reversed",
+          "detail": "broken_paper.tex: interval [+0.410, +0.220] has its lower bound above its upper"
+        },
+        {
+          "code": "value-outside-own-interval",
+          "detail": "broken_paper.tex: +0.900 is reported outside its own interval [+0.100, +0.200]"
+        },
+        {
+          "code": "abstract-number-unsupported",
+          "detail": "broken_paper.tex: 0.412 appears in the abstract but nowhere in the body of the paper"
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "dangling-ref",
+          "detail": "broken_paper.tex: the reference to 'tab:missing' resolves to nothing"
+        },
+        {
+          "code": "row-width",
+          "detail": "broken_paper.tex: tab:one: row 3 has 4 cells, header declares 3"
+        },
+        {
+          "code": "caption-model-mismatch",
+          "detail": "broken_paper.tex: tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'"
+        },
+        {
+          "code": "comparison-without-uncertainty",
+          "detail": "broken_paper.tex: comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "significance-unsupported",
+          "detail": "broken_paper.tex: significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\""
+        },
+        {
+          "code": "no-source",
+          "detail": "no-source (value 0.5): no source declared"
+        },
+        {
+          "code": "not-checked",
+          "detail": "traced: not checked -- baseline (no `baseline` given); seeds (no `seeds` given); caption (no `model` given); measurement (no `baseline_n` given); interval (not recomputed: traced to a log on purpose); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "no-source: not checked -- baseline (no `baseline` given); seeds (no `seeds` given); caption (no `model` given); measurement (no `baseline_n` given); interval (not recomputed: the claim register gives no source); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "loop-a: not checked -- seeds (no `seeds` given); caption (no `model` given); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "loop-b: not checked -- seeds (no `seeds` given); caption (no `model` given); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        }
+      ],
+      "integrity": [
+        {
+          "code": "anchor-missing",
+          "detail": "anchor-gone (value 0.257): provenance: anchor not found in run.md: 'brier 0.999'; recompute: not recomputed: provenance failed"
+        }
+      ],
+      "missing_inputs": [
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 1 (good): claim 'good' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 2 (prior): claim 'prior' source: `method` 'trained_brier_pre' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 3 (disagrees): claim 'disagrees' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 4 (missing): claim 'missing' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 5 (tampered): claim 'tampered' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 6 (setup-mismatch): claim 'setup-mismatch' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 8 (bad-reason): claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 11 (unknown-method): claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 12 (general): claim 'general' is inferred from 'good', which is not a readable claim"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 13 (headline): claim 'headline' is inferred from 'general', which is not a readable claim"
+        }
+      ],
+      "presentation": [],
+      "soundness": [
+        {
+          "code": "circular-support",
+          "detail": "loop-a (inferred from loop-b): loop-a is inferred from itself: loop-a -> loop-b -> loop-a"
+        },
+        {
+          "code": "circular-support",
+          "detail": "loop-b (inferred from loop-a): loop-b is inferred from itself: loop-b -> loop-a -> loop-b"
+        }
+      ],
+      "strength": []
+    },
+    "findings": {
+      "claim_checks_not_run_because": null,
+      "claims": [
+        {
+          "checks": {
+            "baseline": {
+              "missing": "baseline",
+              "type": "NotChecked"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "interval": {
+              "because": "not recomputed: traced to a log on purpose",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "missing": "baseline_n",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "traced",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "must_contain": "brier 0.257",
+              "path": "<workdir>/logs/run.md",
+              "why": "parser-superseded"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.257
+          },
+          "provenance": {
+            "anchor": "brier 0.257",
+            "path": "<workdir>/logs/run.md",
+            "reason": "parser-superseded",
+            "type": "Traced"
+          },
+          "recompute": {
+            "because": "not recomputed: traced to a log on purpose",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "caption": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "comparability": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "interval": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_data": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_integrity": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_outputs": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "anchor-gone",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "must_contain": "brier 0.999",
+              "path": "<workdir>/logs/run.md",
+              "why": "parser-superseded"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.257
+          },
+          "provenance": {
+            "anchor": "brier 0.999",
+            "path": "<workdir>/logs/run.md",
+            "type": "AnchorMissing"
+          },
+          "recompute": {
+            "because": "not recomputed: provenance failed",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "missing": "baseline",
+              "type": "NotChecked"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "interval": {
+              "because": "not recomputed: the claim register gives no source",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "missing": "baseline_n",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "no-source",
+            "origin": null,
+            "setup": null,
+            "source": null,
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.5
+          },
+          "provenance": {
+            "type": "NoSource"
+          },
+          "recompute": {
+            "because": "not recomputed: the claim register gives no source",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "loop-a is inferred from itself: loop-a -> loop-b -> loop-a",
+                  "facts": [],
+                  "kind": "circular-support",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "loop-a",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "loop-b"
+              ]
+            },
+            "statement": "This claim rests on loop-b.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "loop-b"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "loop-b is inferred from itself: loop-b -> loop-a -> loop-b",
+                  "facts": [],
+                  "kind": "circular-support",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "loop-b",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "loop-a"
+              ]
+            },
+            "statement": "This claim rests on loop-a.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "loop-a"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        }
+      ],
+      "inputs": {
+        "claim_register_base": "<workdir>",
+        "claim_register_path": "<workdir>/claims.json",
+        "claim_register_sha256": "7642935ea3e3b376fb7b720ead006ae18d14f327bc6872aa16eec863bf2212c7",
+        "paper_paths": [
+          "broken_paper.tex"
+        ],
+        "paper_sha256": "82f1733a8552958655d934c72852e33405bf02c2bafe323e8d3ff5e5b12525e5",
+        "switched_off": [],
+        "tool_commit": "<commit>"
+      },
+      "must_run": [
+        "model_review",
+        "setup_review"
+      ],
+      "papers": {
+        "broken_paper.tex": {
+          "checks": {
+            "abstract_number_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 appears in the abstract but nowhere in the body of the paper",
+                  "facts": [],
+                  "kind": "abstract-number-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption_model_mismatch": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'",
+                  "facts": [],
+                  "kind": "caption-model-mismatch",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "comparison_without_uncertainty": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [],
+                  "kind": "comparison-without-uncertainty",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "dangling_ref": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "the reference to 'tab:missing' resolves to nothing",
+                  "facts": [],
+                  "kind": "dangling-ref",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "duplicate_label": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "label 'tab:one' is defined more than once; references to it are ambiguous",
+                  "facts": [],
+                  "kind": "duplicate-label",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "interval_reversed": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "interval [+0.410, +0.220] has its lower bound above its upper",
+                  "facts": [],
+                  "kind": "interval-reversed",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "model_not_in_any_table": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "model_review": {
+              "type": "Off"
+            },
+            "number_not_in_any_table": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.412"
+                    ],
+                    [
+                      "Sentence",
+                      "Our method improves the score from 0.412 to 0.201, a clear advance...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.220"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.330"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.410"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.100"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.200"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.900"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "orphan_float": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "row_width": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: row 3 has 4 cells, header declares 3",
+                  "facts": [],
+                  "kind": "row-width",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "setup_review": {
+              "type": "Off"
+            },
+            "significance_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\"",
+                  "facts": [],
+                  "kind": "significance-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "uncorrected_multiple_comparisons": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "value_outside_own_interval": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "+0.900 is reported outside its own interval [+0.100, +0.200]",
+                  "facts": [],
+                  "kind": "value-outside-own-interval",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            }
+          },
+          "facts": {
+            "numeric_sentences": 4,
+            "tables": 2
+          },
+          "unreadable_inputs": []
+        }
+      },
+      "superseded": [],
+      "unreadable_claims": [
+        {
+          "entry": 1,
+          "id": "good",
+          "reason": "claim 'good' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "entry": 2,
+          "id": "prior",
+          "reason": "claim 'prior' source: `method` 'trained_brier_pre' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "entry": 3,
+          "id": "disagrees",
+          "reason": "claim 'disagrees' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "entry": 4,
+          "id": "missing",
+          "reason": "claim 'missing' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "entry": 5,
+          "id": "tampered",
+          "reason": "claim 'tampered' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "entry": 6,
+          "id": "setup-mismatch",
+          "reason": "claim 'setup-mismatch' source: `method` 'trained_brier_post' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "entry": 8,
+          "id": "bad-reason",
+          "reason": "claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired"
+        },
+        {
+          "entry": 11,
+          "id": "unknown-method",
+          "reason": "claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are none: give a folder of method files"
+        },
+        {
+          "entry": 12,
+          "id": "general",
+          "reason": "claim 'general' is inferred from 'good', which is not a readable claim"
+        },
+        {
+          "entry": 13,
+          "id": "headline",
+          "reason": "claim 'headline' is inferred from 'general', which is not a readable claim"
+        }
+      ]
+    },
+    "verdict": "MISSING INPUTS",
+    "why": "entries of the claim register could not be read, so the run cannot pass. This is not a judgment on the paper."
+  },
+  "paper_only": {
+    "board": {
+      "caveat": [
+        {
+          "code": "duplicate-label",
+          "detail": "broken_paper.tex: label 'tab:one' is defined more than once; references to it are ambiguous"
+        },
+        {
+          "code": "interval-reversed",
+          "detail": "broken_paper.tex: interval [+0.410, +0.220] has its lower bound above its upper"
+        },
+        {
+          "code": "value-outside-own-interval",
+          "detail": "broken_paper.tex: +0.900 is reported outside its own interval [+0.100, +0.200]"
+        },
+        {
+          "code": "abstract-number-unsupported",
+          "detail": "broken_paper.tex: 0.412 appears in the abstract but nowhere in the body of the paper"
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "dangling-ref",
+          "detail": "broken_paper.tex: the reference to 'tab:missing' resolves to nothing"
+        },
+        {
+          "code": "row-width",
+          "detail": "broken_paper.tex: tab:one: row 3 has 4 cells, header declares 3"
+        },
+        {
+          "code": "caption-model-mismatch",
+          "detail": "broken_paper.tex: tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'"
+        },
+        {
+          "code": "comparison-without-uncertainty",
+          "detail": "broken_paper.tex: comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "significance-unsupported",
+          "detail": "broken_paper.tex: significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\""
+        }
+      ],
+      "integrity": [],
+      "missing_inputs": [],
+      "presentation": [],
+      "soundness": [],
+      "strength": []
+    },
+    "findings": {
+      "claim_checks_not_run_because": null,
+      "claims": [],
+      "inputs": {
+        "claim_register_base": null,
+        "claim_register_path": null,
+        "claim_register_sha256": null,
+        "paper_paths": [
+          "broken_paper.tex"
+        ],
+        "paper_sha256": "82f1733a8552958655d934c72852e33405bf02c2bafe323e8d3ff5e5b12525e5",
+        "switched_off": [],
+        "tool_commit": "<commit>"
+      },
+      "must_run": [
+        "model_review",
+        "setup_review"
+      ],
+      "papers": {
+        "broken_paper.tex": {
+          "checks": {
+            "abstract_number_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 appears in the abstract but nowhere in the body of the paper",
+                  "facts": [],
+                  "kind": "abstract-number-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption_model_mismatch": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'",
+                  "facts": [],
+                  "kind": "caption-model-mismatch",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "comparison_without_uncertainty": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [],
+                  "kind": "comparison-without-uncertainty",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "dangling_ref": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "the reference to 'tab:missing' resolves to nothing",
+                  "facts": [],
+                  "kind": "dangling-ref",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "duplicate_label": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "label 'tab:one' is defined more than once; references to it are ambiguous",
+                  "facts": [],
+                  "kind": "duplicate-label",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "interval_reversed": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "interval [+0.410, +0.220] has its lower bound above its upper",
+                  "facts": [],
+                  "kind": "interval-reversed",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "model_not_in_any_table": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "model_review": {
+              "type": "Off"
+            },
+            "number_not_in_any_table": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.412"
+                    ],
+                    [
+                      "Sentence",
+                      "Our method improves the score from 0.412 to 0.201, a clear advance...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.220"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.330"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.410"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.100"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.200"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.900"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "orphan_float": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "row_width": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: row 3 has 4 cells, header declares 3",
+                  "facts": [],
+                  "kind": "row-width",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "setup_review": {
+              "type": "Off"
+            },
+            "significance_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\"",
+                  "facts": [],
+                  "kind": "significance-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "uncorrected_multiple_comparisons": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "value_outside_own_interval": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "+0.900 is reported outside its own interval [+0.100, +0.200]",
+                  "facts": [],
+                  "kind": "value-outside-own-interval",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            }
+          },
+          "facts": {
+            "numeric_sentences": 4,
+            "tables": 2
+          },
+          "unreadable_inputs": []
+        }
+      },
+      "superseded": [],
+      "unreadable_claims": []
+    },
+    "verdict": "PASS WITH CAVEATS",
+    "why": "nothing failed; some checks could not run, so the run cannot confirm the parts they cover"
+  },
+  "seeds_only": {
+    "board": {
+      "caveat": [
+        {
+          "code": "duplicate-label",
+          "detail": "broken_paper.tex: label 'tab:one' is defined more than once; references to it are ambiguous"
+        },
+        {
+          "code": "interval-reversed",
+          "detail": "broken_paper.tex: interval [+0.410, +0.220] has its lower bound above its upper"
+        },
+        {
+          "code": "value-outside-own-interval",
+          "detail": "broken_paper.tex: +0.900 is reported outside its own interval [+0.100, +0.200]"
+        },
+        {
+          "code": "abstract-number-unsupported",
+          "detail": "broken_paper.tex: 0.412 appears in the abstract but nowhere in the body of the paper"
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "dangling-ref",
+          "detail": "broken_paper.tex: the reference to 'tab:missing' resolves to nothing"
+        },
+        {
+          "code": "row-width",
+          "detail": "broken_paper.tex: tab:one: row 3 has 4 cells, header declares 3"
+        },
+        {
+          "code": "caption-model-mismatch",
+          "detail": "broken_paper.tex: tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'"
+        },
+        {
+          "code": "comparison-without-uncertainty",
+          "detail": "broken_paper.tex: comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "significance-unsupported",
+          "detail": "broken_paper.tex: significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\""
+        },
+        {
+          "code": "no-source",
+          "detail": "no-source (value 0.5): no source declared"
+        },
+        {
+          "code": "not-checked",
+          "detail": "traced: not checked -- seeds (no `seeds` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "no-source: not checked -- seeds (no `seeds` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "general: not checked -- seeds (no `seeds` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "headline: not checked -- seeds (no `seeds` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "loop-a: not checked -- seeds (no `seeds` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "loop-b: not checked -- seeds (no `seeds` given)"
+        }
+      ],
+      "integrity": [
+        {
+          "code": "number-disagrees",
+          "detail": "disagrees: provenance: artifact present and matches its pinned checksum; recompute: the claim says 0.2, the data gives 0.075 (tolerance 0.1)"
+        },
+        {
+          "code": "artifact-missing",
+          "detail": "missing (value 0.075): provenance: file missing: runs/gone/*.json; recompute: not recomputed: provenance failed"
+        },
+        {
+          "code": "hash-mismatch",
+          "detail": "tampered (value 0.075): provenance: checksum mismatch for results.json: file changed since it was recorded; recompute: not recomputed: provenance failed"
+        },
+        {
+          "code": "setup-mismatch",
+          "detail": "setup-mismatch (value 0.075): provenance: artifact present and matches its pinned checksum; recompute: the claim says model='Qwen3-32B', the data's own record says 'Qwen3-8B'"
+        },
+        {
+          "code": "anchor-missing",
+          "detail": "anchor-gone (value 0.257): provenance: anchor not found in run.md: 'brier 0.999'; recompute: not recomputed: provenance failed"
+        }
+      ],
+      "missing_inputs": [
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 8 (bad-reason): claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 11 (unknown-method): claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are mean_post, trained_brier_post, trained_brier_pre"
+        }
+      ],
+      "presentation": [],
+      "soundness": [],
+      "strength": [
+        {
+          "code": "too-few-seeds",
+          "detail": "prior (value 0.205): only 1 seed(s); the text must not claim reliability"
+        }
+      ]
+    },
+    "findings": {
+      "claim_checks_not_run_because": null,
+      "claims": [
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "measured": null,
+              "type": "Passed"
+            }
+          },
+          "claim": {
+            "fields": {
+              "baseline": 0.25,
+              "baseline_n": 4,
+              "caption_model": "Qwen3-8B",
+              "claimed_significant": true,
+              "compare_to": "prior",
+              "config": {
+                "judge": {
+                  "model": "claude-haiku-4.5"
+                },
+                "model": "Qwen3-8B",
+                "training": "rl"
+              },
+              "lower_is_better": true,
+              "model": "Qwen3-8B",
+              "seeds": 3,
+              "varies": [
+                "training"
+              ]
+            },
+            "id": "good",
+            "origin": null,
+            "setup": {
+              "model": "Qwen3-8B"
+            },
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": "e922e7a439601298764f9cef782ba2d654538be8bc591606874503f26c5f0f5e"
+            },
+            "statement": "Training lowers the Brier score to 0.075 on the main run.",
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "interval": null,
+            "n": 4,
+            "tolerance": 0.001,
+            "type": "Matches",
+            "value": 0.07500000000000001
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "only 1 seed(s); the text must not claim reliability",
+                  "facts": [],
+                  "kind": "too-few-seeds",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            }
+          },
+          "claim": {
+            "fields": {
+              "baseline": 0.2,
+              "baseline_n": 10,
+              "caption_model": "Llama-3-8B",
+              "compare_to": "good",
+              "config": {
+                "judge": {
+                  "model": "gpt-4o"
+                },
+                "model": "Qwen3-8B",
+                "training": "none"
+              },
+              "lower_is_better": true,
+              "model": "Qwen3-8B",
+              "seeds": 1,
+              "varies": [
+                "training"
+              ]
+            },
+            "id": "prior",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_pre",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": "The untrained model has a Brier score of 0.205.",
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.205
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "interval": null,
+            "n": 4,
+            "tolerance": 0.001,
+            "type": "Matches",
+            "value": 0.20500000000000002
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "disagrees",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.2
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "n": 4,
+            "paper_value": 0.2,
+            "tolerance": 0.1,
+            "type": "Disagrees",
+            "value": 0.07500000000000001
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "missing",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/gone/*.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "path": "<workdir>/runs/gone/*.json",
+            "type": "Missing"
+          },
+          "recompute": {
+            "because": "not recomputed: provenance failed",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "tampered",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "actual_sha256": "e922e7a439601298764f9cef782ba2d654538be8bc591606874503f26c5f0f5e",
+            "expected_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "file": "results.json",
+            "type": "Changed"
+          },
+          "recompute": {
+            "because": "not recomputed: provenance failed",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "setup-mismatch",
+            "origin": null,
+            "setup": {
+              "model": "Qwen3-32B"
+            },
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "field": "model",
+            "paper_says": "Qwen3-32B",
+            "record_says": "Qwen3-8B",
+            "type": "SetupDisagrees"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "traced",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "must_contain": "brier 0.257",
+              "path": "<workdir>/logs/run.md",
+              "why": "parser-superseded"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.257
+          },
+          "provenance": {
+            "anchor": "brier 0.257",
+            "path": "<workdir>/logs/run.md",
+            "reason": "parser-superseded",
+            "type": "Traced"
+          },
+          "recompute": {
+            "because": "not recomputed: traced to a log on purpose",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "anchor-gone",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "must_contain": "brier 0.999",
+              "path": "<workdir>/logs/run.md",
+              "why": "parser-superseded"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.257
+          },
+          "provenance": {
+            "anchor": "brier 0.999",
+            "path": "<workdir>/logs/run.md",
+            "type": "AnchorMissing"
+          },
+          "recompute": {
+            "because": "not recomputed: provenance failed",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "interval": {
+              "type": "Off"
+            },
+            "measurement": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "no-source",
+            "origin": null,
+            "setup": null,
+            "source": null,
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.5
+          },
+          "provenance": {
+            "type": "NoSource"
+          },
+          "recompute": {
+            "because": "not recomputed: the claim register gives no source",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "general",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "good",
+                "prior"
+              ]
+            },
+            "statement": "Training improves the Brier score over the untrained model.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "good",
+              "prior"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "headline",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "general"
+              ]
+            },
+            "statement": "Training improves calibration.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "general"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "loop-a",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "loop-b"
+              ]
+            },
+            "statement": "This claim rests on loop-b.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "loop-b"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "type": "Off"
+            },
+            "caption": {
+              "type": "Off"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "type": "Off"
+            },
+            "run_data": {
+              "type": "Off"
+            },
+            "run_integrity": {
+              "type": "Off"
+            },
+            "run_outputs": {
+              "type": "Off"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "loop-b",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "loop-a"
+              ]
+            },
+            "statement": "This claim rests on loop-a.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "loop-a"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        }
+      ],
+      "inputs": {
+        "claim_register_base": "<workdir>",
+        "claim_register_path": "<workdir>/claims.json",
+        "claim_register_sha256": "7642935ea3e3b376fb7b720ead006ae18d14f327bc6872aa16eec863bf2212c7",
+        "paper_paths": [
+          "broken_paper.tex"
+        ],
+        "paper_sha256": "82f1733a8552958655d934c72852e33405bf02c2bafe323e8d3ff5e5b12525e5",
+        "switched_off": [
+          "acyclic_support",
+          "baseline",
+          "caption",
+          "claim_uncertainty",
+          "comparability",
+          "interval",
+          "measurement",
+          "model_review",
+          "run_data",
+          "run_integrity",
+          "run_outputs",
+          "setup_review"
+        ],
+        "tool_commit": "<commit>"
+      },
+      "must_run": [],
+      "papers": {
+        "broken_paper.tex": {
+          "checks": {
+            "abstract_number_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 appears in the abstract but nowhere in the body of the paper",
+                  "facts": [],
+                  "kind": "abstract-number-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption_model_mismatch": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'",
+                  "facts": [],
+                  "kind": "caption-model-mismatch",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "comparison_without_uncertainty": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [],
+                  "kind": "comparison-without-uncertainty",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "dangling_ref": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "the reference to 'tab:missing' resolves to nothing",
+                  "facts": [],
+                  "kind": "dangling-ref",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "duplicate_label": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "label 'tab:one' is defined more than once; references to it are ambiguous",
+                  "facts": [],
+                  "kind": "duplicate-label",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "interval_reversed": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "interval [+0.410, +0.220] has its lower bound above its upper",
+                  "facts": [],
+                  "kind": "interval-reversed",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "model_not_in_any_table": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "model_review": {
+              "type": "Off"
+            },
+            "number_not_in_any_table": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.412"
+                    ],
+                    [
+                      "Sentence",
+                      "Our method improves the score from 0.412 to 0.201, a clear advance...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.220"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.330"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.410"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.100"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.200"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.900"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "orphan_float": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "row_width": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: row 3 has 4 cells, header declares 3",
+                  "facts": [],
+                  "kind": "row-width",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "setup_review": {
+              "type": "Off"
+            },
+            "significance_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\"",
+                  "facts": [],
+                  "kind": "significance-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "uncorrected_multiple_comparisons": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "value_outside_own_interval": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "+0.900 is reported outside its own interval [+0.100, +0.200]",
+                  "facts": [],
+                  "kind": "value-outside-own-interval",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            }
+          },
+          "facts": {
+            "numeric_sentences": 4,
+            "tables": 2
+          },
+          "unreadable_inputs": []
+        }
+      },
+      "superseded": [],
+      "unreadable_claims": [
+        {
+          "entry": 8,
+          "id": "bad-reason",
+          "reason": "claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired"
+        },
+        {
+          "entry": 11,
+          "id": "unknown-method",
+          "reason": "claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are mean_post, trained_brier_post, trained_brier_pre"
+        }
+      ]
+    },
+    "verdict": "MISSING INPUTS",
+    "why": "entries of the claim register could not be read, so the run cannot pass. This is not a judgment on the paper."
+  },
+  "with_claims": {
+    "board": {
+      "caveat": [
+        {
+          "code": "duplicate-label",
+          "detail": "broken_paper.tex: label 'tab:one' is defined more than once; references to it are ambiguous"
+        },
+        {
+          "code": "interval-reversed",
+          "detail": "broken_paper.tex: interval [+0.410, +0.220] has its lower bound above its upper"
+        },
+        {
+          "code": "value-outside-own-interval",
+          "detail": "broken_paper.tex: +0.900 is reported outside its own interval [+0.100, +0.200]"
+        },
+        {
+          "code": "abstract-number-unsupported",
+          "detail": "broken_paper.tex: 0.412 appears in the abstract but nowhere in the body of the paper"
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "number-not-in-any-table",
+          "detail": "broken_paper.tex: 0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\""
+        },
+        {
+          "code": "dangling-ref",
+          "detail": "broken_paper.tex: the reference to 'tab:missing' resolves to nothing"
+        },
+        {
+          "code": "row-width",
+          "detail": "broken_paper.tex: tab:one: row 3 has 4 cells, header declares 3"
+        },
+        {
+          "code": "caption-model-mismatch",
+          "detail": "broken_paper.tex: tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'"
+        },
+        {
+          "code": "comparison-without-uncertainty",
+          "detail": "broken_paper.tex: comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\""
+        },
+        {
+          "code": "significance-unsupported",
+          "detail": "broken_paper.tex: significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\""
+        },
+        {
+          "code": "no-source",
+          "detail": "no-source (value 0.5): no source declared"
+        },
+        {
+          "code": "not-checked",
+          "detail": "good: not checked -- interval (the computational method gives no interval); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "prior: not checked -- interval (the computational method gives no interval); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "traced: not checked -- baseline (no `baseline` given); seeds (no `seeds` given); caption (no `model` given); measurement (no `baseline_n` given); interval (not recomputed: traced to a log on purpose); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "no-source: not checked -- baseline (no `baseline` given); seeds (no `seeds` given); caption (no `model` given); measurement (no `baseline_n` given); interval (not recomputed: the claim register gives no source); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "general: not checked -- seeds (no `seeds` given); caption (no `model` given); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "headline: not checked -- seeds (no `seeds` given); caption (no `model` given); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "loop-a: not checked -- seeds (no `seeds` given); caption (no `model` given); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        },
+        {
+          "code": "not-checked",
+          "detail": "loop-b: not checked -- seeds (no `seeds` given); caption (no `model` given); comparability (no `compare_to` given); run_integrity, run_outputs, run_data (no `run` given)"
+        }
+      ],
+      "integrity": [
+        {
+          "code": "number-disagrees",
+          "detail": "disagrees: provenance: artifact present and matches its pinned checksum; recompute: the claim says 0.2, the data gives 0.075 (tolerance 0.1)"
+        },
+        {
+          "code": "artifact-missing",
+          "detail": "missing (value 0.075): provenance: file missing: runs/gone/*.json; recompute: not recomputed: provenance failed"
+        },
+        {
+          "code": "hash-mismatch",
+          "detail": "tampered (value 0.075): provenance: checksum mismatch for results.json: file changed since it was recorded; recompute: not recomputed: provenance failed"
+        },
+        {
+          "code": "setup-mismatch",
+          "detail": "setup-mismatch (value 0.075): provenance: artifact present and matches its pinned checksum; recompute: the claim says model='Qwen3-32B', the data's own record says 'Qwen3-8B'"
+        },
+        {
+          "code": "anchor-missing",
+          "detail": "anchor-gone (value 0.257): provenance: anchor not found in run.md: 'brier 0.999'; recompute: not recomputed: provenance failed"
+        }
+      ],
+      "missing_inputs": [
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 8 (bad-reason): claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired"
+        },
+        {
+          "code": "claim-unreadable",
+          "detail": "entry 11 (unknown-method): claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are mean_post, trained_brier_post, trained_brier_pre"
+        }
+      ],
+      "presentation": [
+        {
+          "code": "caption-names-other-model",
+          "detail": "prior (value 0.205): caption says model 'Llama-3-8B', run setup says 'Qwen3-8B'"
+        }
+      ],
+      "soundness": [
+        {
+          "code": "circular-support",
+          "detail": "loop-a (inferred from loop-b): loop-a is inferred from itself: loop-a -> loop-b -> loop-a"
+        },
+        {
+          "code": "circular-support",
+          "detail": "loop-b (inferred from loop-a): loop-b is inferred from itself: loop-b -> loop-a -> loop-b"
+        }
+      ],
+      "strength": [
+        {
+          "code": "undeclared-difference",
+          "detail": "good (value 0.075): compared against prior but judge.model also differs ('claude-haiku-4.5' vs 'gpt-4o')"
+        },
+        {
+          "code": "below-baseline",
+          "detail": "prior (value 0.205): does not beat the trivial baseline: scored 0.205 against a baseline of 0.200, and lower is better here, so this result is no better than always predicting the base rate"
+        },
+        {
+          "code": "too-few-seeds",
+          "detail": "prior (value 0.205): only 1 seed(s); the text must not claim reliability"
+        },
+        {
+          "code": "sample-shrank",
+          "detail": "prior (value 0.205): scored episodes dropped to 4 from 10 -- measurement may be destroyed, not improved"
+        },
+        {
+          "code": "undeclared-difference",
+          "detail": "prior (value 0.205): compared against good but judge.model also differs ('gpt-4o' vs 'claude-haiku-4.5')"
+        }
+      ]
+    },
+    "findings": {
+      "claim_checks_not_run_because": null,
+      "claims": [
+        {
+          "checks": {
+            "baseline": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "caption": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "comparability": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "compared against prior but judge.model also differs ('claude-haiku-4.5' vs 'gpt-4o')",
+                  "facts": [],
+                  "kind": "undeclared-difference",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "interval": {
+              "because": "the computational method gives no interval",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "measured": null,
+              "type": "Passed"
+            }
+          },
+          "claim": {
+            "fields": {
+              "baseline": 0.25,
+              "baseline_n": 4,
+              "caption_model": "Qwen3-8B",
+              "claimed_significant": true,
+              "compare_to": "prior",
+              "config": {
+                "judge": {
+                  "model": "claude-haiku-4.5"
+                },
+                "model": "Qwen3-8B",
+                "training": "rl"
+              },
+              "lower_is_better": true,
+              "model": "Qwen3-8B",
+              "seeds": 3,
+              "varies": [
+                "training"
+              ]
+            },
+            "id": "good",
+            "origin": null,
+            "setup": {
+              "model": "Qwen3-8B"
+            },
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": "e922e7a439601298764f9cef782ba2d654538be8bc591606874503f26c5f0f5e"
+            },
+            "statement": "Training lowers the Brier score to 0.075 on the main run.",
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "interval": null,
+            "n": 4,
+            "tolerance": 0.001,
+            "type": "Matches",
+            "value": 0.07500000000000001
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "does not beat the trivial baseline: scored 0.205 against a baseline of 0.200, and lower is better here, so this result is no better than always predicting the base rate",
+                  "facts": [],
+                  "kind": "below-baseline",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "caption says model 'Llama-3-8B', run setup says 'Qwen3-8B'",
+                  "facts": [],
+                  "kind": "caption-names-other-model",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "comparability": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "compared against good but judge.model also differs ('gpt-4o' vs 'claude-haiku-4.5')",
+                  "facts": [],
+                  "kind": "undeclared-difference",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "interval": {
+              "because": "the computational method gives no interval",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "scored episodes dropped to 4 from 10 -- measurement may be destroyed, not improved",
+                  "facts": [],
+                  "kind": "sample-shrank",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "only 1 seed(s); the text must not claim reliability",
+                  "facts": [],
+                  "kind": "too-few-seeds",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            }
+          },
+          "claim": {
+            "fields": {
+              "baseline": 0.2,
+              "baseline_n": 10,
+              "caption_model": "Llama-3-8B",
+              "compare_to": "good",
+              "config": {
+                "judge": {
+                  "model": "gpt-4o"
+                },
+                "model": "Qwen3-8B",
+                "training": "none"
+              },
+              "lower_is_better": true,
+              "model": "Qwen3-8B",
+              "seeds": 1,
+              "varies": [
+                "training"
+              ]
+            },
+            "id": "prior",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_pre",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": "The untrained model has a Brier score of 0.205.",
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.205
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "interval": null,
+            "n": 4,
+            "tolerance": 0.001,
+            "type": "Matches",
+            "value": 0.20500000000000002
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "caption": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "comparability": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "interval": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_data": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_integrity": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_outputs": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "disagrees",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.2
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "n": 4,
+            "paper_value": 0.2,
+            "tolerance": 0.1,
+            "type": "Disagrees",
+            "value": 0.07500000000000001
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "caption": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "comparability": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "interval": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_data": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_integrity": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_outputs": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "missing",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/gone/*.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "path": "<workdir>/runs/gone/*.json",
+            "type": "Missing"
+          },
+          "recompute": {
+            "because": "not recomputed: provenance failed",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "caption": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "comparability": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "interval": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_data": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_integrity": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_outputs": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "tampered",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "actual_sha256": "e922e7a439601298764f9cef782ba2d654538be8bc591606874503f26c5f0f5e",
+            "expected_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "file": "results.json",
+            "type": "Changed"
+          },
+          "recompute": {
+            "because": "not recomputed: provenance failed",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "caption": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "comparability": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "interval": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_data": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_integrity": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_outputs": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "setup-mismatch",
+            "origin": null,
+            "setup": {
+              "model": "Qwen3-32B"
+            },
+            "source": {
+              "method": "trained_brier_post",
+              "path": "<workdir>/runs/main/results.json",
+              "proposed_sha256": null,
+              "sha256": null
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.075
+          },
+          "provenance": {
+            "path": "<workdir>/runs/main/results.json",
+            "type": "Intact"
+          },
+          "recompute": {
+            "field": "model",
+            "paper_says": "Qwen3-32B",
+            "record_says": "Qwen3-8B",
+            "type": "SetupDisagrees"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "missing": "baseline",
+              "type": "NotChecked"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "interval": {
+              "because": "not recomputed: traced to a log on purpose",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "missing": "baseline_n",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "traced",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "must_contain": "brier 0.257",
+              "path": "<workdir>/logs/run.md",
+              "why": "parser-superseded"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.257
+          },
+          "provenance": {
+            "anchor": "brier 0.257",
+            "path": "<workdir>/logs/run.md",
+            "reason": "parser-superseded",
+            "type": "Traced"
+          },
+          "recompute": {
+            "because": "not recomputed: traced to a log on purpose",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "caption": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "comparability": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "interval": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_data": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_integrity": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "run_outputs": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            },
+            "seeds": {
+              "because": "provenance or recompute failed for this claim",
+              "type": "Skipped"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "anchor-gone",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "must_contain": "brier 0.999",
+              "path": "<workdir>/logs/run.md",
+              "why": "parser-superseded"
+            },
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.257
+          },
+          "provenance": {
+            "anchor": "brier 0.999",
+            "path": "<workdir>/logs/run.md",
+            "type": "AnchorMissing"
+          },
+          "recompute": {
+            "because": "not recomputed: provenance failed",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "baseline": {
+              "missing": "baseline",
+              "type": "NotChecked"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "interval": {
+              "because": "not recomputed: the claim register gives no source",
+              "type": "Skipped"
+            },
+            "measurement": {
+              "missing": "baseline_n",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "no-source",
+            "origin": null,
+            "setup": null,
+            "source": null,
+            "statement": null,
+            "superseded_by": null,
+            "tol": null,
+            "value": 0.5
+          },
+          "provenance": {
+            "type": "NoSource"
+          },
+          "recompute": {
+            "because": "not recomputed: the claim register gives no source",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "general",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "good",
+                "prior"
+              ]
+            },
+            "statement": "Training improves the Brier score over the untrained model.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "good",
+              "prior"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "headline",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "general"
+              ]
+            },
+            "statement": "Training improves calibration.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "general"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "loop-a is inferred from itself: loop-a -> loop-b -> loop-a",
+                  "facts": [],
+                  "kind": "circular-support",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "loop-a",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "loop-b"
+              ]
+            },
+            "statement": "This claim rests on loop-b.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "loop-b"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        },
+        {
+          "checks": {
+            "acyclic_support": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "loop-b is inferred from itself: loop-b -> loop-a -> loop-b",
+                  "facts": [],
+                  "kind": "circular-support",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption": {
+              "missing": "model",
+              "type": "NotChecked"
+            },
+            "claim_uncertainty": {
+              "type": "Off"
+            },
+            "comparability": {
+              "missing": "compare_to",
+              "type": "NotChecked"
+            },
+            "run_data": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_integrity": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "run_outputs": {
+              "missing": "run",
+              "type": "NotChecked"
+            },
+            "seeds": {
+              "missing": "seeds",
+              "type": "NotChecked"
+            }
+          },
+          "claim": {
+            "fields": {},
+            "id": "loop-b",
+            "origin": null,
+            "setup": null,
+            "source": {
+              "claims": [
+                "loop-a"
+              ]
+            },
+            "statement": "This claim rests on loop-a.",
+            "superseded_by": null,
+            "tol": null,
+            "value": null
+          },
+          "provenance": {
+            "claims": [
+              "loop-a"
+            ],
+            "type": "Derived"
+          },
+          "recompute": {
+            "because": "not recomputed: inferred from other claims, so there is no number to recompute",
+            "type": "Skipped"
+          }
+        }
+      ],
+      "inputs": {
+        "claim_register_base": "<workdir>",
+        "claim_register_path": "<workdir>/claims.json",
+        "claim_register_sha256": "7642935ea3e3b376fb7b720ead006ae18d14f327bc6872aa16eec863bf2212c7",
+        "paper_paths": [
+          "broken_paper.tex"
+        ],
+        "paper_sha256": "82f1733a8552958655d934c72852e33405bf02c2bafe323e8d3ff5e5b12525e5",
+        "switched_off": [],
+        "tool_commit": "<commit>"
+      },
+      "must_run": [
+        "model_review",
+        "setup_review"
+      ],
+      "papers": {
+        "broken_paper.tex": {
+          "checks": {
+            "abstract_number_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 appears in the abstract but nowhere in the body of the paper",
+                  "facts": [],
+                  "kind": "abstract-number-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "caption_model_mismatch": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: caption names 'Llama-3.1-8B' but every row is 'Qwen3-32B'",
+                  "facts": [],
+                  "kind": "caption-model-mismatch",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "comparison_without_uncertainty": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "comparative claim with no interval, p-value or n -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [],
+                  "kind": "comparison-without-uncertainty",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "dangling_ref": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "the reference to 'tab:missing' resolves to nothing",
+                  "facts": [],
+                  "kind": "dangling-ref",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "duplicate_label": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "label 'tab:one' is defined more than once; references to it are ambiguous",
+                  "facts": [],
+                  "kind": "duplicate-label",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "interval_reversed": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "interval [+0.410, +0.220] has its lower bound above its upper",
+                  "facts": [],
+                  "kind": "interval-reversed",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "model_not_in_any_table": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "model_review": {
+              "type": "Off"
+            },
+            "number_not_in_any_table": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "0.412 is stated in the text but appears in no table -- \"Our method improves the score from 0.412 to 0.201, a clear advance....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.412"
+                    ],
+                    [
+                      "Sentence",
+                      "Our method improves the score from 0.412 to 0.201, a clear advance...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.220 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.220"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.330 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.330"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.410 is stated in the text but appears in no table -- \"We measure +0.330 [+0.410, +0.220] for the treatment condition....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.410"
+                    ],
+                    [
+                      "Sentence",
+                      "We measure +0.330 [+0.410, +0.220] for the treatment condition...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.100 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.100"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.200 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.200"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                },
+                {
+                  "detail": "0.900 is stated in the text but appears in no table -- \"The control gives +0.900 [+0.100, +0.200], well outside expectations....\"",
+                  "facts": [
+                    [
+                      "Number",
+                      "0.900"
+                    ],
+                    [
+                      "Sentence",
+                      "The control gives +0.900 [+0.100, +0.200], well outside expectations...."
+                    ]
+                  ],
+                  "kind": "number-not-in-any-table",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "orphan_float": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "row_width": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "tab:one: row 3 has 4 cells, header declares 3",
+                  "facts": [],
+                  "kind": "row-width",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "setup_review": {
+              "type": "Off"
+            },
+            "significance_unsupported": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "significance claimed with no interval or p-value -- \"The effect is significant and holds across settings....\"",
+                  "facts": [],
+                  "kind": "significance-unsupported",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            },
+            "uncorrected_multiple_comparisons": {
+              "measured": null,
+              "type": "Passed"
+            },
+            "value_outside_own_interval": {
+              "measured": null,
+              "problems": [
+                {
+                  "detail": "+0.900 is reported outside its own interval [+0.100, +0.200]",
+                  "facts": [],
+                  "kind": "value-outside-own-interval",
+                  "where": null
+                }
+              ],
+              "type": "Flagged"
+            }
+          },
+          "facts": {
+            "numeric_sentences": 4,
+            "tables": 2
+          },
+          "unreadable_inputs": []
+        }
+      },
+      "superseded": [],
+      "unreadable_claims": [
+        {
+          "entry": 8,
+          "id": "bad-reason",
+          "reason": "claim 'bad-reason' source: `why` 'inconvenient' is not one of computed-offline, external-source, parser-superseded, pipeline-retired"
+        },
+        {
+          "entry": 11,
+          "id": "unknown-method",
+          "reason": "claim 'unknown-method' source: `method` 'ms' is not a known computational method; known are mean_post, trained_brier_post, trained_brier_pre"
+        }
+      ]
+    },
+    "verdict": "MISSING INPUTS",
+    "why": "entries of the claim register could not be read, so the run cannot pass. This is not a judgment on the paper."
+  }
+}

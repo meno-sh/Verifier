@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.DS_Store
+# the state folder of the Verifier in a checked project; the testbed keeps its own on purpose
+.verifier/
+!evaluation/tests/testbeds/**/.verifier/

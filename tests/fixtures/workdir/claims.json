@@ -1,0 +1,110 @@
+{
+  "claims": [
+    {
+      "id": "good",
+      "statement": "Training lowers the Brier score to 0.075 on the main run.",
+      "value": 0.075,
+      "seeds": 3,
+      "model": "Qwen3-8B",
+      "caption_model": "Qwen3-8B",
+      "baseline": 0.25,
+      "lower_is_better": true,
+      "baseline_n": 4,
+      "claimed_significant": true,
+      "compare_to": "prior",
+      "varies": ["training"],
+      "config": {"model": "Qwen3-8B", "judge": {"model": "claude-haiku-4.5"}, "training": "rl"},
+      "setup": {"model": "Qwen3-8B"},
+      "source": {
+        "kind": "artifact",
+        "method": "trained_brier_post",
+        "path": "runs/main/results.json",
+        "sha256": "e922e7a439601298764f9cef782ba2d654538be8bc591606874503f26c5f0f5e"
+      }
+    },
+    {
+      "id": "prior",
+      "statement": "The untrained model has a Brier score of 0.205.",
+      "value": 0.205,
+      "seeds": 1,
+      "model": "Qwen3-8B",
+      "caption_model": "Llama-3-8B",
+      "baseline": 0.2,
+      "lower_is_better": true,
+      "baseline_n": 10,
+      "compare_to": "good",
+      "varies": ["training"],
+      "config": {"model": "Qwen3-8B", "judge": {"model": "gpt-4o"}, "training": "none"},
+      "source": {"kind": "artifact", "method": "trained_brier_pre", "path": "runs/main/results.json"}
+    },
+    {
+      "id": "disagrees",
+      "value": 0.2,
+      "source": {"kind": "artifact", "method": "trained_brier_post", "path": "runs/main/results.json"}
+    },
+    {
+      "id": "missing",
+      "value": 0.075,
+      "source": {"kind": "artifact", "method": "trained_brier_post", "path": "runs/gone/*.json"}
+    },
+    {
+      "id": "tampered",
+      "value": 0.075,
+      "source": {"kind": "artifact", "method": "trained_brier_post", "path": "runs/main/results.json",
+                 "sha256": "0000000000000000000000000000000000000000000000000000000000000000"}
+    },
+    {
+      "id": "setup-mismatch",
+      "value": 0.075,
+      "setup": {"model": "Qwen3-32B"},
+      "source": {"kind": "artifact", "method": "trained_brier_post", "path": "runs/main/results.json"}
+    },
+    {
+      "id": "traced",
+      "value": 0.257,
+      "source": {"kind": "document", "path": "logs/run.md", "must_contain": "brier 0.257",
+                 "why": "parser-superseded"}
+    },
+    {
+      "id": "bad-reason",
+      "value": 0.257,
+      "source": {"kind": "document", "path": "logs/run.md", "must_contain": "brier 0.257",
+                 "why": "inconvenient"}
+    },
+    {
+      "id": "anchor-gone",
+      "value": 0.257,
+      "source": {"kind": "document", "path": "logs/run.md", "must_contain": "brier 0.999",
+                 "why": "parser-superseded"}
+    },
+    {
+      "id": "no-source",
+      "value": 0.5
+    },
+    {
+      "id": "unknown-method",
+      "value": 0.5,
+      "source": {"kind": "artifact", "method": "ms", "path": "runs/main/results.json"}
+    },
+    {
+      "id": "general",
+      "statement": "Training improves the Brier score over the untrained model.",
+      "source": {"kind": "claims", "claims": ["good", "prior"]}
+    },
+    {
+      "id": "headline",
+      "statement": "Training improves calibration.",
+      "source": {"kind": "claims", "claims": ["general"]}
+    },
+    {
+      "id": "loop-a",
+      "statement": "This claim rests on loop-b.",
+      "source": {"kind": "claims", "claims": ["loop-b"]}
+    },
+    {
+      "id": "loop-b",
+      "statement": "This claim rests on loop-a.",
+      "source": {"kind": "claims", "claims": ["loop-a"]}
+    }
+  ]
+}
