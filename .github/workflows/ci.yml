@@ -1,0 +1,89 @@
+name: CI
+
+# Every pull request, and every push to dev or main.
+on:
+  pull_request:
+  push:
+    branches: [main, dev]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run ruff check .
+
+  test:
+    runs-on: ubuntu-latest
+    env:
+      # some tests make commits in throwaway repos
+      GIT_AUTHOR_NAME: ci
+      GIT_AUTHOR_EMAIL: ci@users.noreply.github.com
+      GIT_COMMITTER_NAME: ci
+      GIT_COMMITTER_EMAIL: ci@users.noreply.github.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      # each test is a script that exits 1 on a failure; run them all, then fail if any did
+      - run: |
+          failed=""
+          for test in tests/test_*.py; do
+            echo "::group::$test"
+            uv run "$test" || failed="$failed $test"
+            echo "::endgroup::"
+          done
+          if [ -n "$failed" ]; then echo "::error::failed:$failed"; exit 1; fi
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # only the commits this pull request or push adds; older history has known findings
+      - env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          # a new branch, or a force-push that orphaned `before`, scans the last commit
+          if git cat-file -e "$BASE^{commit}" 2>/dev/null; then RANGE="$BASE..HEAD"; else RANGE="-1 HEAD"; fi
+          curl -fsSLo gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz
+          echo "5bc41815076e6ed6ef8fbecc9d9b75bcae31f39029ceb55da08086315316e3ba  gitleaks.tar.gz" | sha256sum -c
+          tar xzf gitleaks.tar.gz gitleaks
+          ./gitleaks detect --log-opts="$RANGE" --redact --no-banner --verbose
+
+  change-map:
+    # a fork's pull request gets a read-only token, so it cannot post the comment
+    if: >-
+      github.event_name == 'pull_request'
+      && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v5
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          uv run --no-sync python .github/change_map.py "$BASE" "$HEAD" > comment.md
+          id=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
+                 --jq '.[] | select(.body | startswith("<!-- change-map -->")) | .id' | head -1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$id" -F body=@comment.md
+          else
+            gh api "repos/$REPO/issues/$PR/comments" -F body=@comment.md
+          fi

@@ -1,0 +1,21 @@
+name: PR description
+
+# Its own workflow, so editing a description re-runs only this check, not the tests.
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  length:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          BODY: ${{ github.event.pull_request.body }}
+          LIMIT: 2500
+        run: |
+          n=$(printf %s "$BODY" | python3 -c 'import sys; print(len(sys.stdin.read()))')
+          if [ "$n" -gt "$LIMIT" ]; then
+            echo "::error::The PR description is $n characters; the limit is $LIMIT. Keep it to what changed, why, and how it was tested, and put the detail in commit messages, code or docs/."
+            exit 1
+          fi
+          echo "The PR description is $n characters (limit $LIMIT)."
