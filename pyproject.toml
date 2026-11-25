@@ -18,7 +18,7 @@ requires = ["setuptools>=77"]   # 77 reads the SPDX `license` expression
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-exclude = ["tests*", "evaluation*"]   # the evals are not part of the installed commands
+exclude = ["tests*"]   # the tests are not part of the installed commands
 namespaces = false              # only folders with __init__.py, so build/ and docs/ stay out
 
 [tool.setuptools.package-data]
@@ -36,10 +36,8 @@ dev = ["ruff>=0.15", "mypy>=1.18"]   # lint, and the type check of the refactore
 [tool.ruff]
 target-version = "py313"
 line-length = 100
-# docs and the testbeds hold research scripts and saved runs, not the verifier's code.
-# evaluation/stage2-ab holds bench scripts copied as-is from a local experiment.
-extend-exclude = ["docs", "evaluation/tests/testbeds", "evaluation/examples",
-                  "evaluation/stage2-ab"]
+# docs holds the documents and the SPEC generator, not the verifier's code.
+extend-exclude = ["docs"]
 
 [tool.ruff.lint]
 # E/F: pycodestyle+pyflakes. I: import sorting. B: bugbear. UP: pyupgrade.
@@ -50,7 +48,6 @@ select = ["E", "F", "I", "B", "UP", "SIM", "BLE", "ANN", "D", "TID"]
 [tool.ruff.lint.per-file-ignores]
 # Tests need neither full type annotations nor docstrings.
 "tests/**" = ["ANN", "D"]
-"evaluation/tests/**" = ["ANN", "D"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
