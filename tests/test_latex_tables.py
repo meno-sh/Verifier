@@ -9,7 +9,7 @@ The cases come from ICLR papers whose wrong numbers were missing from the candid
   - a sentence that two draft files repeat is listed one time.
   - each step of an algorithm float is a candidate of its own.
   - a \\multicolumn header spreads over its columns, so no data cell is dropped, and two
-    header rows give each column its full path (dmzM5UdAq6, eFoj2egr7G);
+    header rows give each column its full path (dmzM5UdAq6);
   - a \\multirow label reaches every row of its block, also with a negative count;
   - bold cells, ticks and crosses stay readable, and each table is also one whole piece;
   - a \\scalebox size is not glued to the value it scales (9,002 cells on the ZH papers);
