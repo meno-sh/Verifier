@@ -17,9 +17,7 @@ def main() -> int:
     over = []
     for package in sorted(p.parent for p in ROOT.glob("*/__init__.py")):  # tests/ has none
         for path in sorted(package.rglob("*.py")):
-            # stage2-ab holds bench scripts copied as-is from a local experiment; tests are exempt
-            parts = path.relative_to(ROOT).parts
-            if "examples" in parts or "stage2-ab" in parts or "tests" in parts:
+            if "tests" in path.relative_to(ROOT).parts:  # tests are exempt
                 continue
             lines = len((ast.get_docstring(ast.parse(path.read_text())) or "").splitlines())
             if lines > MAX_LINES:

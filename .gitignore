@@ -10,6 +10,5 @@ dist/
 .ruff_cache/
 .pytest_cache/
 .DS_Store
-# the state folder of the Verifier in a checked project; the testbed keeps its own on purpose
+# the state folder of the Verifier in a checked project
 .verifier/
-!evaluation/tests/testbeds/**/.verifier/
