@@ -69,15 +69,13 @@ It catches:
   does not follow, a dataset size or hyperparameter that differs between sections, a
   baseline that does not test what its name says, a number in the text that differs from
   a table.
-- **Claims the results do not fully support:** a claim that the paper does not fully
-  support, a claim that a possible follow-up experiment can break, or a claim that rests on
-  itself through other claims.
+- **Claims the results do not fully support:** a claim that the results do not fully
+  support, or a claim that a possible follow-up experiment can plausibly refute.
 
 It misses:
 
-- **A wrong number that the paper reports the same way everywhere.** The Verifier only
-  reads the paper, so it has nothing to compare the number with.
-- **Problems in your code or data.** Checking code and data is not supported yet.
+- **Problems in your code or data.** Checking code and data receives only partial and
+  experimental support currently.
 - **Errors in figures.** The Verifier reads the source text and tables, not images.
 - **Whether the work is novel or important.** It checks what the paper says, not whether
   it is worth saying.
@@ -169,10 +167,10 @@ A claim is a result the paper states, such as "our method gets 71% accuracy". Th
 is everything the results depend on: definitions, data, models and settings. Uncertainty
 quantification takes each claim that rests on other claims, writes results a follow-up experiment
 could plausibly find, scores how much each would break the claim, and flags the claim if the
-worst believable result, or the claim with no result against it, scores above 0.59.
+worst believable result, or the claim with no result against it, scores above a cutoff.
 
 > [!CAUTION]
-> A full check runs an agent (Kimi K3). It can open files and run commands inside the
+> A full check runs an agent. It can open files and run commands inside the
 > folder it checks. Only check folders you are happy for it to read.
 
 ## Update and uninstall
