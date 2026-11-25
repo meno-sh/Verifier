@@ -1,0 +1,8 @@
+flowchart LR
+    P["Your paper<br/>(.tex or .md)"] --> A["<b>The paper is read</b><br/>its claims and setup details<br/>are written down and linked"]
+    A --> C1["<b>Static checks</b><br/>numbers, tables,<br/>references, captions"]
+    A --> C2["<b>Setup read</b><br/>an LLM looks for faulty<br/>definitions, derivations, settings"]
+    A --> C3["<b>Uncertainty quantification</b><br/>for claims that rest on others,<br/>results that could undercut them"]
+    C1 --> R["<b>Report</b><br/>issues by kind"]
+    C2 --> R
+    C3 --> R

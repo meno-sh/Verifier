@@ -152,16 +152,10 @@ the checks better (see [docs/USAGE.md](docs/USAGE.md#when-a-flag-is-wrong)).
 
 ## How it works
 
-```mermaid
-flowchart LR
-    P["Your paper<br/>(.tex or .md)"] --> A["<b>The paper is read</b><br/>its claims and setup details<br/>are written down and linked"]
-    A --> C1["<b>Static checks</b><br/>numbers, tables,<br/>references, captions"]
-    A --> C2["<b>Setup read</b><br/>an LLM looks for faulty<br/>definitions, derivations, settings"]
-    A --> C3["<b>Uncertainty quantification</b><br/>for claims that rest on others,<br/>results that could undercut them"]
-    C1 --> R["<b>Report</b><br/>issues by kind"]
-    C2 --> R
-    C3 --> R
-```
+<p align="center">
+  <img src="docs/img/how-it-works.png" width="760" alt="How it works. Your paper (.tex or .md) is read: its claims and setup details are written down and linked. Three checks then run. Static checks look at numbers, tables, references and captions. The setup read has an LLM look for faulty definitions, derivations and settings. Uncertainty quantification looks, for claims that rest on others, for results that could undercut them. All three feed one report of issues by kind.">
+</p>
+<!-- Drawn from docs/img/how-it-works.mmd (Mermaid). Redraw the PNG if you change it. -->
 
 A claim is a result the paper states, such as "our method gets 71% accuracy". The setup
 is everything the results depend on: definitions, data, models and settings. Uncertainty
